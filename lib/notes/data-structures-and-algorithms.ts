@@ -1,0 +1,327 @@
+import { SubjectContent } from "../types";
+
+const content: SubjectContent = {
+  subjectCode: "24ERP304",
+  modules: [
+    // ---------------------------------------------------------------
+    // MODULE I — Basic Concepts of Data Structures
+    // ---------------------------------------------------------------
+    {
+      id: "m1",
+      title: "Basic Concepts of Data Structures",
+      overview: {
+        summary:
+          "This chapter introduces what a data structure actually is, why we bother choosing one over another, and how to measure an algorithm's efficiency using time and space complexity and the asymptotic notations O, Ω, Θ.",
+        whyItMatters:
+          "Almost every KTU/TKM DSA paper opens with a question from this module — a Big-O definition, a code-complexity trace, or an ADT-vs-data-structure distinction. It is the highest-frequency module in the subject and is a prerequisite for every later module, so these are the cheapest marks in the whole syllabus.",
+      },
+      coreConcepts: [
+        "A data structure is a systematic way of organizing and storing data so it can be accessed and modified efficiently.",
+        "Need for data structures: as data grows, naive storage makes search/insert/delete slow — the right structure keeps operations fast.",
+        "Cost and benefit: every data structure trades something for something — e.g. arrays give fast access but costly insertion; linked lists give fast insertion but slow access. Choice depends on which operations dominate.",
+        "Abstract Data Type (ADT) = a logical/mathematical description of data and the operations on it, with no detail of how it's implemented (e.g. 'Stack ADT' just says push/pop exist). A data structure is the actual implementation of an ADT.",
+        "Time complexity = number of basic operations as a function of input size n, not actual seconds; Space complexity = extra memory used as a function of n.",
+        "Best case = fastest scenario, Worst case = slowest scenario, Average case = expected behaviour over typical/random input — most exam answers should default to worst case unless asked otherwise.",
+        "Big-O (O) gives the worst-case/upper bound; Big-Omega (Ω) gives the best-case/lower bound; Big-Theta (Θ) gives a tight bound when best and worst grow at the same rate.",
+        "Drop constants and lower-order terms: 3n² + 5n + 2 is written as O(n²).",
+        "Nested loops up to n multiply: O(n) inside O(n) gives O(n²). Sequential loops add, then keep only the larger term.",
+        "A loop whose counter doubles/halves each step gives O(log n); recursive calls are analysed with a recurrence relation, solved using the Master Theorem.",
+        "Growth order, fastest to slowest: O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!).",
+      ],
+      definitions: [
+        { term: "Data Structure", definition: "A specific way of organizing, storing, and managing data in a computer so that it can be used efficiently, defined by both its storage layout and the operations permitted on it." },
+        { term: "Abstract Data Type (ADT)", definition: "A logical model of a data object defined purely by the operations that can be performed on it (e.g. insert, delete, search), independent of how those operations are implemented." },
+        { term: "Time Complexity", definition: "A measure of the computational time an algorithm takes to run, expressed as a function of input size n, independent of hardware or implementation language." },
+        { term: "Space Complexity", definition: "The total amount of memory an algorithm needs to run to completion, including auxiliary space used apart from the input, expressed as a function of n." },
+        { term: "Big-O notation O(g(n))", definition: "f(n) = O(g(n)) if there exist positive constants c and n₀ such that f(n) ≤ c·g(n) for all n ≥ n₀ — an asymptotic upper bound on growth." },
+        { term: "Big-Omega notation Ω(g(n))", definition: "f(n) = Ω(g(n)) if there exist positive constants c and n₀ such that f(n) ≥ c·g(n) for all n ≥ n₀ — an asymptotic lower bound on growth." },
+        { term: "Big-Theta notation Θ(g(n))", definition: "f(n) = Θ(g(n)) if f(n) = O(g(n)) and f(n) = Ω(g(n)) simultaneously — a tight asymptotic bound." },
+      ],
+      diagrams: [
+        { title: "Growth rate comparison of common complexity classes", svgKey: "big-o-growth-curves", caption: "As n increases, O(1) and O(log n) stay flat while O(n²) and O(2ⁿ) shoot upward — the curve examiners expect you to sketch and label." },
+        { title: "Nested vs sequential loops", svgKey: "loop-complexity-blocks", caption: "Nested loops multiply their bounds; sequential loops add, and only the larger term survives." },
+      ],
+      formulas: [
+        { name: "Big-O definition", expression: "f(n) = O(g(n))  ⇔  f(n) ≤ c · g(n),  ∀ n ≥ n₀,  c > 0", note: "Use this exact inequality form when asked to 'define' or 'prove' Big-O." },
+        { name: "Big-Omega definition", expression: "f(n) = Ω(g(n))  ⇔  f(n) ≥ c · g(n),  ∀ n ≥ n₀,  c > 0" },
+        { name: "Big-Theta definition", expression: "f(n) = Θ(g(n))  ⇔  c₁·g(n) ≤ f(n) ≤ c₂·g(n),  ∀ n ≥ n₀" },
+        { name: "Master Theorem (divide & conquer recurrences)", expression: "T(n) = a·T(n/b) + f(n)", note: "Compare f(n) with n^(log_b a) to pick the matching case and read off T(n) directly." },
+        { name: "Common complexity table", expression: "O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)", note: "Memorize this order; many questions just ask you to rank or compare two of these." },
+      ],
+      examFocus: [
+        { question: "Define Big-O, Big-Omega and Big-Theta notation with examples.", weightage: "high", note: "Give the formal inequality for each, then one tiny example." },
+        { question: "Differentiate Abstract Data Type and Data Structure.", weightage: "high", note: "ADT = what (logical operations), Data Structure = how (concrete implementation). Give Stack ADT vs array-based/linked-list-based stack as the example." },
+        { question: "Find the time complexity of a given code snippet (nested loops / recursion).", weightage: "high", note: "Identify loop bounds, check nested vs sequential, write the final O(...)." },
+        { question: "Differentiate best, worst and average case complexity with an example (e.g. linear search).", weightage: "medium" },
+        { question: "State and apply the Master Theorem on a given recurrence relation.", weightage: "medium" },
+      ],
+      revisionNotes: [
+        "ADT = logical operations only. Data Structure = actual implementation.",
+        "O = worst case · Ω = best case · Θ = tight bound (both match).",
+        "Drop constants & lower-order terms before writing final Big-O.",
+        "Nested loops → multiply. Sequential loops → add, keep the larger term.",
+        "Loop variable ×2 or ÷2 each iteration → O(log n).",
+        "Order to memorize: O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)",
+        "Master theorem form: T(n) = aT(n/b) + f(n) — compare f(n) to n^(log_b a).",
+      ],
+    },
+
+    // ---------------------------------------------------------------
+    // MODULE II — Arrays and Linked List
+    // ---------------------------------------------------------------
+    {
+      id: "m2",
+      title: "Arrays and Linked List",
+      overview: {
+        summary:
+          "This chapter covers the two most fundamental linear data structures — arrays (and the stack/queue ADTs built on them) and linked lists (singly, doubly, circular) — plus the classic stack application of evaluating arithmetic expressions.",
+        whyItMatters:
+          "Infix-to-postfix conversion and postfix evaluation are near-guaranteed numerical questions every semester. Linked list operations (insert/delete/traverse) and array-vs-linked-list comparisons are also extremely high frequency, making this the second-most exam-dense module after Module I.",
+      },
+      coreConcepts: [
+        "Array: elements stored in contiguous memory, giving O(1) random access via index, but a fixed size and costly insertion/deletion in the middle (O(n) shifting).",
+        "Stack (LIFO): insertion and deletion only at one end, called 'top' — operations are push and pop, both O(1).",
+        "Queue (FIFO): insertion at 'rear', deletion at 'front' — operations are enqueue and dequeue.",
+        "Circular Queue: rear and front wrap around using modulo arithmetic, solving the wasted-space problem of a linear queue implemented on an array.",
+        "Double Ended Queue (Deque): insertion and deletion allowed at both front and rear.",
+        "Expression evaluation: infix (a+b) is what humans write; postfix (ab+) and prefix (+ab) remove the need for parentheses/precedence and are evaluated easily using a stack.",
+        "Infix → Postfix conversion uses a stack to hold operators, popping based on precedence and associativity rules.",
+        "Postfix evaluation: scan left to right, push operands, on seeing an operator pop two operands, apply it, push the result back.",
+        "Linked List: a 'self-referential structure' — each node contains data plus a pointer to the next node — allocated dynamically at runtime (unlike an array's static block).",
+        "Singly Linked List: one pointer per node (next); operations — insert at head/tail/position, delete, search, traverse — all O(1) at head, O(n) elsewhere since there's no random access.",
+        "Doubly Linked List: each node has both next and prev pointers, allowing traversal in both directions at the cost of extra memory per node.",
+        "Circular Linked List: the last node's next pointer points back to the first node instead of NULL — useful for round-robin style applications.",
+        "Stacks and Queues can also be implemented using a linked list instead of an array — this removes the fixed-size limitation entirely.",
+        "Application — Polynomial representation: each term (coefficient, exponent) is stored as a linked list node, making polynomial addition a simple linked-list merge.",
+      ],
+      definitions: [
+        { term: "Stack", definition: "A linear data structure that follows the Last-In-First-Out (LIFO) principle, where insertion and deletion happen only at one end called the top." },
+        { term: "Queue", definition: "A linear data structure that follows the First-In-First-Out (FIFO) principle, where insertion happens at the rear and deletion at the front." },
+        { term: "Circular Queue", definition: "A queue implementation where the last position is connected back to the first using modulo arithmetic, allowing reuse of freed slots without shifting elements." },
+        { term: "Deque (Double Ended Queue)", definition: "A linear data structure that allows insertion and deletion of elements from both the front and the rear ends." },
+        { term: "Linked List", definition: "A linear data structure made of nodes, where each node is a self-referential structure containing data and a pointer to the next node, allocated dynamically in memory." },
+        { term: "Self-Referential Structure", definition: "A structure (in C, typically via struct) that contains a pointer to another instance of the same structure type, used to build linked data structures." },
+        { term: "Doubly Linked List", definition: "A linked list in which each node stores two pointers — one to the next node and one to the previous node — enabling traversal in both directions." },
+        { term: "Circular Linked List", definition: "A linked list in which the last node's next pointer points back to the first node, forming a closed loop instead of ending at NULL." },
+      ],
+      diagrams: [
+        { title: "Array vs Linked List memory layout", svgKey: "array-vs-linked-list", caption: "Arrays sit in one contiguous memory block (fast indexed access); linked-list nodes are scattered, connected only by pointers (fast insertion, no shifting)." },
+        { title: "Singly vs Doubly Linked List node structure", svgKey: "linked-list-types", caption: "A singly linked node holds data + next; a doubly linked node adds a prev pointer for backward traversal." },
+      ],
+      formulas: [
+        { name: "Circular queue index update", expression: "rear = (rear + 1) mod size  ;  front = (front + 1) mod size", note: "This wrap-around is exactly what makes a circular queue reuse freed slots." },
+        { name: "Operator precedence (highest → lowest)", expression: "( )  >  ^  >  * , /  >  + , −", note: "Right-associative: ^.  Left-associative: * / + −. Needed for infix→postfix conversion." },
+        { name: "Postfix evaluation rule", expression: "scan left→right: operand → push | operator → pop 2, compute, push result", note: "The final value left on the stack is the answer." },
+      ],
+      examFocus: [
+        { question: "Convert a given infix expression to postfix using the stack-based algorithm (show the stack at each step).", weightage: "high", note: "Draw a 3-column trace: symbol read, stack contents, output so far." },
+        { question: "Evaluate a given postfix expression using a stack (show step-by-step trace).", weightage: "high" },
+        { question: "Differentiate array and linked list as data structures (memory, access time, insertion/deletion cost).", weightage: "high" },
+        { question: "Write an algorithm to insert/delete a node at a given position in a singly linked list.", weightage: "high" },
+        { question: "Differentiate singly, doubly and circular linked lists.", weightage: "medium" },
+        { question: "Explain how a circular queue overcomes the limitation of a linear queue.", weightage: "medium" },
+      ],
+      revisionNotes: [
+        "Stack = LIFO (push/pop at top). Queue = FIFO (enqueue at rear, dequeue at front).",
+        "Circular queue fixes linear queue's wasted space using mod arithmetic.",
+        "Infix→Postfix: use a stack for operators, respect precedence + associativity.",
+        "Postfix eval: operand→push, operator→pop 2 + compute + push result.",
+        "Array: contiguous, O(1) access, costly insert/delete in middle.",
+        "Linked list: scattered nodes + pointers, O(1) insert at head, no random access (O(n) to reach index i).",
+        "Doubly linked list adds a prev pointer → bidirectional traversal, more memory per node.",
+        "Circular linked list: last node points back to head instead of NULL.",
+      ],
+    },
+
+    // ---------------------------------------------------------------
+    // MODULE III — Trees and Graphs
+    // ---------------------------------------------------------------
+    {
+      id: "m3",
+      title: "Trees and Graphs",
+      overview: {
+        summary:
+          "This chapter moves from linear to non-linear data structures: binary trees and binary search trees (with their representations and traversal orders), and graphs (their representations, and the two fundamental traversal algorithms DFS and BFS).",
+        whyItMatters:
+          "Tree traversal algorithms (preorder/inorder/postorder) and BST operations are write-the-algorithm staples, while graph representation (adjacency matrix vs list) and BFS/DFS tracing on a given graph appear almost every semester — together this module is consistently one of the top three most-tested.",
+      },
+      coreConcepts: [
+        "Tree terminology: root (top node, no parent), parent/child, leaf (no children), height (longest path root→leaf), degree (number of children of a node).",
+        "Binary Tree: each node has at most two children, conventionally called left and right.",
+        "Tree types: full (every node has 0 or 2 children), complete (all levels full except possibly the last, filled left to right), perfect (all leaves at the same level), skewed (every node has only one child — behaves like a linked list).",
+        "Binary tree representation: array representation (index i's children at 2i+1, 2i+2 — works well for complete trees) vs linked representation (each node stores left and right pointers).",
+        "Tree Traversals: Preorder (root → left → right), Inorder (left → root → right), Postorder (left → right → root), Level order (breadth-first, implemented using a queue).",
+        "Inorder traversal of a BST visits nodes in sorted (ascending) order — this is the single most commonly tested property.",
+        "Binary Search Tree (BST): for every node, all values in the left subtree are smaller and all values in the right subtree are larger.",
+        "BST operations — search, insert, delete — all run in O(h) where h is the tree's height: O(log n) average, but O(n) worst case for a skewed tree.",
+        "Graph: a set of vertices (nodes) connected by edges; can be directed or undirected, weighted or unweighted.",
+        "Graph representation: Adjacency Matrix (V×V matrix, O(V²) space, O(1) edge lookup) vs Adjacency List (array/list of neighbours per vertex, O(V+E) space, better for sparse graphs).",
+        "Depth First Search (DFS): explores as deep as possible along a branch before backtracking; implemented using a stack or recursion.",
+        "Breadth First Search (BFS): explores all neighbours at the current depth before moving deeper; implemented using a queue; gives the shortest path in an unweighted graph.",
+        "Applications of graphs: shortest path routing (maps/GPS), social network connection modelling, cycle detection, topological sorting (task scheduling).",
+      ],
+      definitions: [
+        { term: "Binary Tree", definition: "A tree data structure in which each node has at most two children, referred to as the left child and the right child." },
+        { term: "Binary Search Tree (BST)", definition: "A binary tree in which, for every node, all keys in its left subtree are smaller and all keys in its right subtree are larger than the node's key." },
+        { term: "Tree Traversal", definition: "A systematic method of visiting every node of a tree exactly once, classified as preorder, inorder, postorder (depth-first) or level-order (breadth-first)." },
+        { term: "Graph", definition: "A non-linear data structure consisting of a finite set of vertices and a set of edges connecting pairs of vertices." },
+        { term: "Adjacency Matrix", definition: "A V×V matrix representation of a graph where entry [i][j] = 1 (or weight) if an edge exists between vertex i and vertex j, else 0." },
+        { term: "Adjacency List", definition: "A graph representation where each vertex stores a list of the vertices it is directly connected to, more space-efficient than a matrix for sparse graphs." },
+        { term: "Depth First Search (DFS)", definition: "A graph traversal algorithm that explores as far as possible along each branch before backtracking, typically implemented using a stack or recursion." },
+        { term: "Breadth First Search (BFS)", definition: "A graph traversal algorithm that explores all neighbours of a vertex before moving to the next level, implemented using a queue, and that finds the shortest path in an unweighted graph." },
+      ],
+      diagrams: [
+        { title: "Binary tree traversal orders", svgKey: "binary-tree-traversals", caption: "The same tree visited three different ways — preorder, inorder, postorder — inorder always comes out sorted for a BST." },
+        { title: "BFS vs DFS order on a sample graph", svgKey: "graph-bfs-dfs", caption: "BFS spreads outward level by level using a queue; DFS dives down one branch fully using a stack before backtracking." },
+      ],
+      formulas: [
+        { name: "Max nodes at level i", expression: "2^i  (root is level 0)" },
+        { name: "Max nodes in a binary tree of height h", expression: "2^(h+1) − 1" },
+        { name: "Height of a complete binary tree with n nodes", expression: "⌊log₂ n⌋" },
+        { name: "BST operation complexity", expression: "Average: O(log n)   Worst (skewed): O(n)" },
+        { name: "Graph representation space", expression: "Adjacency Matrix: O(V²)    Adjacency List: O(V + E)" },
+      ],
+      examFocus: [
+        { question: "Write the algorithm for preorder/inorder/postorder traversal of a binary tree.", weightage: "high", note: "Give the 3-line recursive definition for all three, examiners often want all three together." },
+        { question: "Construct a BST by inserting a given sequence of numbers, then show its inorder traversal.", weightage: "high" },
+        { question: "Trace BFS and DFS on a given graph starting from a specified vertex.", weightage: "high", note: "Show the visited order and clearly mark the queue (BFS) / stack (DFS) state at each step." },
+        { question: "Differentiate adjacency matrix and adjacency list representations of a graph.", weightage: "high" },
+        { question: "Explain deletion in a BST for the three cases (leaf, one child, two children).", weightage: "medium" },
+        { question: "State real-world applications of graph traversal algorithms.", weightage: "medium" },
+      ],
+      revisionNotes: [
+        "Preorder: root-left-right. Inorder: left-root-right. Postorder: left-right-root.",
+        "Inorder traversal of a BST = sorted ascending order — always state this.",
+        "BST insert/search/delete: O(log n) average, O(n) worst (skewed tree).",
+        "Adjacency Matrix: O(V²) space, O(1) lookup. Adjacency List: O(V+E) space, better for sparse graphs.",
+        "DFS → stack/recursion, goes deep first. BFS → queue, goes wide first, gives shortest path (unweighted).",
+        "Max nodes at level i = 2^i. Height of complete tree with n nodes = ⌊log₂ n⌋.",
+      ],
+    },
+
+    // ---------------------------------------------------------------
+    // MODULE IV — Sorting and Searching
+    // ---------------------------------------------------------------
+    {
+      id: "m4",
+      title: "Sorting and Searching",
+      overview: {
+        summary:
+          "This chapter compares the major sorting algorithms — including linear-time (non-comparison) sorts, heap sort, merge sort, and quick sort — plus external memory sorting for data too large to fit in RAM, and the two fundamental search algorithms.",
+        whyItMatters:
+          "Tracing an algorithm (merge sort / quick sort / heap sort) on a given array, step by step, is one of the most reliable 8-mark numerical questions in this subject. Time-complexity comparison tables across sorting algorithms are also a near-guaranteed short-answer question.",
+      },
+      coreConcepts: [
+        "A sort is 'stable' if equal elements retain their original relative order; it is 'in-place' if it needs no significant extra memory beyond the input array.",
+        "Linear-time (non-comparison) sorting: Counting Sort and Radix Sort achieve O(n+k) time by exploiting known key ranges instead of comparing elements — faster than any comparison sort's O(n log n) lower bound, but only works for restricted key types (e.g. integers in a known range).",
+        "Heap Sort: build a max-heap from the array, then repeatedly swap the root (maximum) with the last element and 're-heapify' — O(n log n) in all cases, in-place, but not stable.",
+        "Merge Sort: divide-and-conquer — recursively split the array in half, sort each half, then merge the two sorted halves — O(n log n) in all cases, stable, but needs O(n) extra space.",
+        "Quick Sort: divide-and-conquer using a pivot — partition the array so smaller elements go left and larger go right of the pivot, then recurse on each side — average O(n log n), worst case O(n²) (when the pivot is always the smallest/largest), in-place.",
+        "External Memory Sorting: used when the dataset is too large to fit in main memory — data is split into chunks that fit in RAM, each chunk is sorted and written to disk, then chunks are merged (k-way merge) — minimizing slow disk I/O is the key design goal.",
+        "Linear Search: check every element one by one — O(n) — works on unsorted data, no precondition needed.",
+        "Binary Search: repeatedly halve the search range by comparing the middle element — O(log n) — requires the data to be sorted first.",
+      ],
+      definitions: [
+        { term: "Stable Sort", definition: "A sorting algorithm that preserves the relative order of elements that compare as equal." },
+        { term: "In-place Sort", definition: "A sorting algorithm that rearranges elements within the original array, using only a constant amount of extra memory." },
+        { term: "Heap", definition: "A complete binary tree stored as an array, satisfying the heap property: in a max-heap every parent is ≥ its children (≤ for a min-heap)." },
+        { term: "Divide and Conquer", definition: "An algorithm design strategy that splits a problem into smaller subproblems, solves each recursively, and combines their solutions." },
+        { term: "External Sorting", definition: "A class of sorting algorithms designed for data too large to fit in main memory, which sort manageable chunks on disk and then merge them." },
+        { term: "Binary Search precondition", definition: "Binary search only works correctly on data that is already sorted, since it relies on comparing against a middle element to eliminate half the remaining range." },
+      ],
+      diagrams: [
+        { title: "Merge sort divide-and-merge tree", svgKey: "merge-sort-tree", caption: "The array is split down to single elements, then merged back up in sorted order — the O(log n) levels each doing O(n) work give O(n log n) total." },
+        { title: "Max-heap structure for heap sort", svgKey: "max-heap-structure", caption: "Every parent is ≥ its children; the root (max) is repeatedly extracted and the heap re-built." },
+      ],
+      formulas: [
+        { name: "Sorting time-complexity table", expression: "Counting/Radix: O(n+k) | Heap: O(n log n) | Merge: O(n log n) | Quick (avg): O(n log n) | Quick (worst): O(n²)", note: "Memorize this table exactly — it is asked almost verbatim most semesters." },
+        { name: "Merge Sort recurrence", expression: "T(n) = 2T(n/2) + O(n)  ⇒  T(n) = O(n log n)", note: "Classic Master Theorem case 2 example." },
+        { name: "Binary Search recurrence", expression: "T(n) = T(n/2) + O(1)  ⇒  T(n) = O(log n)" },
+        { name: "Linear Search complexity", expression: "Best: O(1)   Worst/Average: O(n)" },
+      ],
+      examFocus: [
+        { question: "Trace merge sort / quick sort / heap sort on a given array, showing every intermediate step.", weightage: "high", note: "Draw the recursion/partition tree — partial marks are awarded per correct step even if the final array is wrong." },
+        { question: "Compare the time and space complexity of heap sort, merge sort and quick sort.", weightage: "high" },
+        { question: "Write and analyze the binary search algorithm, deriving its time complexity.", weightage: "high" },
+        { question: "Explain why quick sort's worst case is O(n²) and how a good pivot choice avoids it.", weightage: "medium" },
+        { question: "Explain the need for and working of external memory sorting.", weightage: "medium" },
+        { question: "Differentiate linear search and binary search, including their preconditions.", weightage: "medium" },
+      ],
+      revisionNotes: [
+        "Stable = equal elements keep order. In-place = no major extra memory.",
+        "Heap sort: O(n log n) always, in-place, NOT stable.",
+        "Merge sort: O(n log n) always, stable, needs O(n) extra space.",
+        "Quick sort: O(n log n) average, O(n²) worst, in-place.",
+        "Counting/Radix sort: O(n+k), beats O(n log n) but only for restricted key types.",
+        "External sorting = sort chunks on disk + k-way merge, used when data > RAM.",
+        "Linear search O(n), no precondition. Binary search O(log n), needs sorted data.",
+      ],
+    },
+
+    // ---------------------------------------------------------------
+    // MODULE V — Hashing Table and Tries
+    // ---------------------------------------------------------------
+    {
+      id: "m5",
+      title: "Hashing Table and Tries",
+      overview: {
+        summary:
+          "This chapter covers the Map ADT and its most common implementation, the hash table: how hash functions are designed, how collisions are resolved (chaining and open addressing), and a brief look at tries for prefix-based string storage.",
+        whyItMatters:
+          "Designing a hash function for a given key set and resolving collisions by hand (chaining or linear/quadratic probing) is a guaranteed numerical question. The definitions of load factor, the three probing techniques, and trie basics are also frequently asked as short-answer questions.",
+      },
+      coreConcepts: [
+        "Map ADT: stores key-value pairs and supports operations like put(key, value), get(key), and remove(key).",
+        "A Hash Table implements the Map ADT using an array plus a hash function that converts a key into an array index, giving O(1) average-case access.",
+        "Hash function design — Division method: h(k) = k mod m. Multiplication method: uses the fractional part of k times a constant. A good hash function distributes keys uniformly and is fast to compute.",
+        "Load factor α = n/m (number of entries ÷ table size) — directly affects performance; a higher load factor means more collisions and slower operations.",
+        "Collision: when two different keys hash to the same slot.",
+        "Chaining: each table slot holds a linked list (or similar structure) of all entries that hashed there — simple, but performance degrades as chains grow long.",
+        "Open Addressing: on collision, probe for the next available slot within the table itself (no extra structure) — Linear Probing: h'(k,i) = (h(k)+i) mod m (suffers from clustering); Quadratic Probing: h'(k,i) = (h(k)+c₁i+c₂i²) mod m (reduces clustering); Double Hashing: h'(k,i) = (h₁(k)+i·h₂(k)) mod m (uses a second hash function for the step size, best collision spread).",
+        "Applications of Hashing: finding duplicates in a list (insert into a hash set, O(1) lookup catches repeats), set intersection (hash one set, then probe with the other for O(n+m) intersection instead of O(n·m)).",
+        "Trie (prefix tree): a tree where each path from the root spells out a string, with each edge labelled by a character — used to implement the Map ADT efficiently for string keys, especially for prefix search/autocomplete.",
+      ],
+      definitions: [
+        { term: "Map ADT", definition: "An abstract data type that stores a collection of key-value pairs and supports insertion, lookup, and deletion by key, with each key appearing at most once." },
+        { term: "Hash Function", definition: "A function that converts a key into an array index (hash value) for use in a hash table, ideally distributing keys uniformly across the available slots." },
+        { term: "Load Factor (α)", definition: "The ratio of the number of stored entries (n) to the total number of slots (m) in a hash table: α = n/m, used as a measure of how full the table is." },
+        { term: "Collision", definition: "An event where two distinct keys are mapped by the hash function to the same slot in a hash table." },
+        { term: "Chaining", definition: "A collision-resolution technique where each hash table slot holds a linked list of all entries that hashed to that slot." },
+        { term: "Open Addressing", definition: "A collision-resolution technique where, on collision, the algorithm probes for another empty slot within the same table according to a fixed probing sequence." },
+        { term: "Double Hashing", definition: "An open-addressing technique that uses a second hash function to determine the probe step size, h'(k,i) = (h₁(k) + i·h₂(k)) mod m, giving better key distribution than linear or quadratic probing." },
+        { term: "Trie", definition: "A tree-based data structure used to store strings, where each path from the root to a node represents a prefix, enabling fast prefix search and retrieval." },
+      ],
+      diagrams: [
+        { title: "Chaining vs Open Addressing on collision", svgKey: "hash-chaining-probing", caption: "Chaining grows a linked list at the colliding slot; open addressing finds another empty slot inside the same table using a probe sequence." },
+        { title: "Trie structure for a small set of words", svgKey: "trie-structure", caption: "Each edge is a character; a marked node means a complete word ends there — shared prefixes share the same path." },
+      ],
+      formulas: [
+        { name: "Division method hash function", expression: "h(k) = k mod m" },
+        { name: "Load factor", expression: "α = n / m" },
+        { name: "Linear probing", expression: "h'(k, i) = (h(k) + i) mod m" },
+        { name: "Quadratic probing", expression: "h'(k, i) = (h(k) + c₁·i + c₂·i²) mod m" },
+        { name: "Double hashing", expression: "h'(k, i) = (h₁(k) + i · h₂(k)) mod m" },
+        { name: "Average-case hash table operation cost", expression: "O(1) average  ·  O(n) worst case (all keys collide)" },
+      ],
+      examFocus: [
+        { question: "Given a set of keys and a hash function, build the hash table resolving collisions using chaining.", weightage: "high", note: "Show h(k) computation for every key, then draw the chains." },
+        { question: "Given a set of keys, build the hash table using linear probing / quadratic probing / double hashing.", weightage: "high", note: "Show every probe attempt, not just the final slot — partial marks are given per correct probe step." },
+        { question: "Differentiate chaining and open addressing as collision-resolution techniques.", weightage: "high" },
+        { question: "Explain load factor and its effect on hash table performance.", weightage: "medium" },
+        { question: "Explain the structure and use of a Trie with an example set of words.", weightage: "medium" },
+        { question: "Explain how hashing is used to find duplicates / compute set intersection efficiently.", weightage: "medium" },
+      ],
+      revisionNotes: [
+        "Hash table = array + hash function → O(1) average access.",
+        "Division method: h(k) = k mod m. Load factor α = n/m.",
+        "Chaining: linked list per slot. Open addressing: probe within the table.",
+        "Linear probing → clustering problem. Quadratic & double hashing reduce it.",
+        "Double hashing step size comes from a 2nd hash function — best distribution.",
+        "Trie: each path = a string; great for prefix search / autocomplete.",
+        "Hashing turns 'find duplicate' / 'set intersection' from O(n²) into ~O(n).",
+      ],
+    },
+  ],
+};
+
+export default content;

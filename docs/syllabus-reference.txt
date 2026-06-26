@@ -1,0 +1,2087 @@
+
+
+================================================================================
+S3 | 24MAP301 | Advanced Linear Algebra, Complex Analysis & PDE
+================================================================================
+24MAP301
+                   COMPLEX ANALYSIS AND PARTIAL             3    1 2 0 5 5           2024
+                      DIFFERENTIAL EQUATIONS
+Preamble: This course introduces the concept of vector space, inner product, complex
+differentiation, complex integration and partial differential equations. The concepts
+discussed here are widely used in the modeling and analysis of a wide range of physical
+phenomena and has got application across all branches of engineering. After completing this
+course, students will acquire the ability to utilize the above concepts for solving mathematical
+problems more efficiently.
+
+Prerequisite: A basic course in linear algebra, complex numbers and partial differentiation.
+Course Outcomes: After the completion of the course the student will be able to
+ CO 1       Identify many familiar systems as vector spaces and operate them using vector
+            space tools such as basis and dimension (Apply)
+ CO 2       Apply the concept of real and complex Inner product spaces for generating
+            approximations and orthogonal projections (Apply)
+ CO 3       Use Cauchy-Riemann equations and the concept of harmonic functions for
+            solving physical and engineering problems (Apply)
+ CO 4       Compute different types of contour integrals using Cauchy’s residue theorem
+            (Apply level).
+ CO 5       Solve different type of Partial differential equations in engineering domains and
+            solve it using appropriate methods (Apply).
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: (Vector space)
+(Text 1: Relevant topics from sections 2.1, 2.2, 2.3, 2.4, 2.5)
+Vector Spaces, Subspaces -Definition and Examples. Linear independence of vectors, Linear
+span, Basis and dimension, Co-ordinate representation of vectors, Row space and Column
+space
+ MODULE II: (Inner Product)
+(Text 1: Relevant topics from sections 5.1, 5.2, 5.5)
+Inner Product: Inner product spaces, properties of inner product, length and distance,
+Orthogonality, Cauchy-Schwarz inequality, Orthogonal projection, orthogonal complement,
+Orthonormal basis, Gram-Schmidt orthogonalization process.
+ MODULE III: (Complex differentiation)
+(Text 2: Relevant topics from sections 13.3,13.4)
+Circles and disks half-planes, complex functions, limit, continuity and derivatives, analytic
+functions, Cauchy-Riemann equations, Laplace equation, Harmonic functions, harmonic
+conjugate functions
+ MODULE IV: (Complex Integration)
+(Text 2- Relevant topics from sections 14.1,14.2,14.3,14.4,15.4,16.1,16.2,16.3)
+  Cauchy’s integral theorem for simply connected domains (without proof), Cauchy’s
+  Integral formula for simply connected domains (without proof), Cauchy’s Integral
+  formula for derivatives of analytic functions, Taylor and Maclaurin series, Laurent's
+  series, Poles and Residues, Evaluation of residues, Cauchy's residue theorem.
+ MODULE V: (Partial Differential Equations)
+(Text 3: Relevant topics from sections 17.1,17.2,17.3,17.4,17.5)
+  Introduction, Formation of partial differential equations -elimination of arbitrary
+  constants-elimination of arbitrary functions, Solutions of partial differential equations,
+  Equations solvable by direct integration, Linear equations of the first order, Lagrange's
+  linear equation.
+Text books
+   1. Richard Bronson, Gabriel B. Costa, Linear Algebra-an introduction, 2nd edition,
+       Academic press, 2007
+   2. Erwin Kreyszig, Advanced Engineering Mathematics, 10thEdition, John Wiley &
+       Sons, 2016.
+   3. B.S. Grewal, Higher Engineering Mathematics, Khanna Publishers, 44th Edition,
+       2018.
+
+References
+   1. Peter V. O'Neil, Advanced Engineering Mathematics, Cengage, 7th Edition, 2012
+   2. Gilbert Strang, Linear Algebra and It’s Applications, 4th edition, Cengage Learning,
+      2006
+   3. Seymour Lipschutz, Marc Lipson, Schaum’s outline of linear algebra, 3rd Ed., Mc
+      Graw Hill Edn.2017
+   4. David C Lay, Linear algebra and its applications,3rd edition, Pearson
+   5. Prof. Premananda Bera, Advanced Linear Algebra, IIT Roorkee, [NPTEL],
+      https://nptel.ac.in/courses/111107164 (Relevant sections)
+   6. Prof. Gilbert Strang, Linear Algebra [MITOPENCOURSEWARE], Massachusetts
+      Institute of Technology, https://ocw.mit.edu/courses/18-06-linear-algebra-spring-
+      2010/ (Relevant sections)
+
+================================================================================
+S3 | 24EST332 | Network Theory
+================================================================================
+24EST332                  NETWORK THEORY                                             Introduction
+                                                                2   0 0 0 2     2          2024
+Preamble: The course provides an introduction to the analysis of electrical circuits using
+various network theorems and Laplace Transforms. The course facilitates the students to
+learn about coupled circuits and three phase networks. It also enables the students to
+evaluate network functions and two port networks.
+
+Prerequisite: NIL
+Course Outcomes: After the completion of the course the student will be able to
+ CO 1 Apply circuit theorems to solve electric networks. [Apply]
+ CO 2 Analyze the steady state and transient response of electrical circuits. [Analyze]
+ CO 3 Determine the resonant frequency of a given series electrical circuit [Understand]
+ CO 4 Analyze three-phase balanced and unbalanced networks in Y and Δ configurations
+      [Analyze]
+ CO 5 Evaluate two-port network parameters of any given circuit [Understand]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: Steady state analysis using circuit theorems
+ Steady state analysis of AC and DC circuits with dependent and independent sources;
+ Source transformation; Superposition, Thevenin’s, Norton’s, and Maximum Power
+ Transfer theorems; Problems from DC circuits only.
+ MODULE II: Transient analysis of circuits in s – domain
+ Review of Laplace Transform. Transformation of a circuit into s-domain. Transform
+ impedance of passive circuit elements - R, L and C.
+ Transient Analysis: Formulation and solution of dynamic equations of RL and RC series
+ networks with DC excitation and initial conditions using Laplace Transforms, Time
+ constant; Complete solution of RL and RC series circuits with sinusoidal excitation using
+ Laplace Transforms. Simple Numerical Problems.
+ MODULE III: Resonance in series circuits and analysis of transformed circuits
+ Resonance in Series circuits – Quality factor – Bandwidth – Simple Numerical Problems
+ Steady state Analysis: Mesh analysis and node analysis of transformed circuits in -domain.
+ Numerical Problems
+ MODULE IV: Steady state analysis of three phase network
+ Complex Power in sinusoidal steady state, Steady state analysis of - three-phase three-
+ wire and four-wire unbalanced Y circuits, Unbalanced Delta circuit, Neutral shift. Complex
+ Power
+ MODULE V: Two port networks
+ Two-port network parameters - Z, Y, h and T parameter, Conditions for symmetry &
+ reciprocity.
+Text books
+  1. Joseph A. Edminister and MahmoodNahvi, "Theory and Problems in Electric circuits",
+  McGraw Hill, 5th Edition, 2010.
+  2. Ravish R. Singh, "Network Analysis and Synthesis", McGraw-Hill Education, 2013
+  3. Sudhakar and Shyam Mohan- Circuits and Networks: Analysis and Synthesis, 5e,
+  Mc Graw Hill Education
+Reference books
+  1. Abhijit Chakrabarti, "Circuit Theory Analysis and Synthesis", Dhanpat Rai& Co.,
+  Seventh - Revised edition, 2018
+  2. Hayt and Kemmerly, “Engineering Circuit Analysis”, McGraw Hill Education, New
+  Delhi, 8th Ed, 2013.
+  3. Van Valkenberg, "Network Analysis", Prentice Hall India Learning Pvt. Ltd., 3 edition,
+  1980.
+  4. K. S. Suresh Kumar, “Electric Circuit Analysis”, Pearson Publications, 2013.
+  5. B. R. Gupta, "Network Analysis and Synthesis", S. Chand & Company Ltd, 2010.
+  6. https://nptel.ac.in/courses/108105159, Network Analysis, IIT Kharagpur.
+
+================================================================================
+S3 | 24ERJ303 | Digital Electronics and Logic Design
+================================================================================
+24ERJ303               DIGITAL ELECTRONICS AND                                                Introduction
+
+                              LOGIC DESIGN                 2       0 2       2   5       5           2024
+Preamble: The course begins from the fundamentals on digital electronics to logic design.
+The design of combinational and sequential logic circuits is introduced. Verilog
+implementation of the digital circuits is also introduced through the course.
+
+Prerequisite: Nil
+Course Outcomes: After the completion of the course the student will be able to
+ CO1 Understand and apply various number systems and codes, such as binary, octal,
+     hexadecimal, ASCII, excess-3, Gray code, BCD, and error detection codes like the
+     parity code. [Apply]
+ CO2 Design and implement combinational logic circuits using ICs and VERILOG. [Analyse]
+ CO3 Design and implement sequential logic circuits [Analyse]
+ CO4 Understand the process of analog to digital conversion and digital to analog conversion
+     [Apply]
+ CO5 Understand the fundamentals of state machines, including state transition diagrams,
+     Moore and Mealy machines [Understand]
+ CO6 Apply the concepts learnt in the course to develop a project. [Evaluate]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: Number Systems and Logic Gate fundamentals
+ Number Systems and Codes: Binary, Octal and hexadecimal conversions- ASCII code,
+ Excess -3 code, Gray code, BCD, Error detection codes-Parity code. Signed numbers-
+ representation, addition and subtraction, Fixed point and floating-point representation.
+ TTL and CMOS logic families-Internal diagram of TTL NAND gate and CMOS NOR gate.
+ MODULE II: Boolean Algebra and Combinational Circuits Design
+ Boolean algebra - Sum of Products method, Product of Sum method – K map
+ representation and simplification (up to four variables) - Pairs, Quads, Octets, Don’t
+ care conditions.
+ Combinational circuits: Adders -Full adder and half adder, Subtractors- half subtractor
+ and full subtractor, 4 bit parallel binary adder/subtractor, Carry Look ahead adders.
+ MODULE III: Digital Logic Components and Verilog Programming
+ Comparators, Parity generators and checkers, Encoders, Decoders, , BCD to seven
+ segment decoder, Code converters, Multiplexers, Demultiplexers, Architecture of
+ Arithmetic Logic Units (Block schematic only).
+ Verilog basic language elements: identifiers, data objects, scalar data types, operators.
+ Entity and Architecture, Gate Level Modelling: Basic gates, testbench, XOR using NAND
+ and NOR. Modeling combinational logic circuits in Verilog - Data Flow Modelling,
+ Behavioral level Modeling: half adder, full adder, mux, demux, decoder, encoder.
+ MODULE IV: Flip-Flops, Registers, and Counters: Sequential Logic Design
+ Flip-Flops, SR, JK, D and T flip-flops, JK Master Slave Flip-flop, Preset and clear inputs,
+ Conversion of flip-flops. Registers -SISO, SIPO, PISO, PIPO. Up/Down Counters:
+ Asynchronous Counters – Modulus of a counter – Mod-N counters Ring counter,
+ Johnson Counter Synchronous counters, Design of Synchronous counters.
+Modeling of sequential logic circuits in Verilog: flipflops, counters.
+ MODULE V: State Machines, D/A and A/D Converters, Programmable Logic
+ Devices
+ State Machines: State transition diagram, Moore and Mealy Machines Digital to Analog
+ converter –Specifications, Weighted resistor type, R-2R Ladder type. Analog to Digital
+ Converter – Specifications, Flash type, Successive approximation type. Programmable
+ Logic Devices - PAL, PLA, FPGA, combinational logic design with PAL, PLA.
+Text books
+   1. Floyd T.L, Digital Fundamentals, 11th Edition by Pearson, 2015
+   2. C.H.Roth and L.L.Kimney, “Fundamentals of Logic Design”, Cengage Learning, 2020
+   3. Mano M.M, “Logic and Computer Design Fundamentals”, Pearson Education UK,
+       2013
+   4. A. Anand Kumar, “Fundamentals of Digital Electronics”, Prentice Hall India Pvt.,
+       Limited, 2016
+   5. S. Salivahanan, “Digital Circuits and Design”, Vikas Publishing House Pvt Limited,
+       2009
+   6. Samir Palnikar, “Verilog HDL: A Guide to Digital Design and Synthesis”, Sunsoft
+       Press
+Reference books
+   1. M. Morris Mano and Michael D. Ciletti, "Digital Design with an introduction to
+      Verilog HDL", Pearson, 2013.
+   2. Roger L. Tokheim, "Digital Electronics: Principles and Applications", McGraw-Hill
+      Education, 2014
+   3. Stephen Brown and Zvonko Vranesic "Fundamentals of Digital Logic with Verilog
+      Design", McGraw-Hill education, 3024
+ 4. Ronald J. Tocci, Neal S. Widmer, and Gregory L. Moss "Digital Systems: Principles
+    and Applications", Prentice-Hall, 1981
+ 5. William Kleitz "Digital Electronics: A Practical Approach with VHDL", Prentice-Hall,
+    1999.
+ 6. Prof. Gouthem Saha, IIT Kharagpur, NPTEL course on Digital Electronic Circuits,
+    https://nptel.ac.in/courses/108105132
+
+================================================================================
+S3 | 24ERP304 | Data Structures and Algorithms
+================================================================================
+24ERP304              ALGORITHMS                                         of Introduction
+                                                       2   1 2 0 4 4           2024
+Preamble:
+The course is intended to provide the foundations of the practical implementation and
+usage of Data Structures and algorithms. It covers concepts of various data structures like
+arrays, stack, queue, list, tree, graph and introduces algorithms and their complexity
+Prerequisite: Topics covered under the course Problem-Solving and Programming
+Course Outcomes: After the completion of the course the student will be able to
+ CO1 Understand abstract specification of data structures and their implementation
+      [Understand]
+ CO2 Understand the time and space complexity of algorithms [Understand]
+CO3 Explain basic data structures, their applications and their relative merits [Understand]
+CO4 Apply an appropriate Hash Function [Apply]
+CO5 Examine how to convert an algorithmic solution to a program using suitable data
+    structures [Analysel
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULEI: Basic Concepts of Data Structures
+ Introduction: Overview of Data Structures – The Need for Data Structures – Cost and
+ Benefits – Abstract Data Types and Data Structures. Basic complexity analysis – Best,
+ Worst, and Average Cases – Asymptotic Analysis -Analyzing Programs – Space Bounds,
+ Complexity Calculation of Simple Algorithms.
+ MODULEII: Arrays and Linked List
+ Array - Stacks, Queues-Circular Queues, Double Ended Queues, Evaluation of
+ Expressions. Linked List - Self Referential Structures, Dynamic Memory Allocation,
+ Singly Linked List-Operations on Linked List. Doubly Linked List, Circular Linked List,
+ Stacks and Queues using Linked List. Applications of array and linked list -, Polynomial
+ representation.
+ MODULEIII: Trees and Graphs
+ Trees -Binary Trees - Binary Tree Representation, Tree Traversals, Binary Search Trees-
+ Binary Search Tree Operations. Graphs, Representation of Graphs, Depth First Search
+ and Breadth First Search on Graphs, Applications of Graphs.
+ MODULE IV: Sorting and searching
+ Sorting – Linear Sorting – Heap Sort – Merge Sort – Quick Sort –External Memory
+ Sorting. Searching - Linear Search, Binary Search, Complexity analysis.
+ MODULEV: Hashing Table and Tries
+ Map ADT - Hash Tables and implementation of Map using Hash Tables - Design of hash
+ functions - Collision resolution schemes: chaining, open addressing schemes - linear
+ probing, quadratic probing, double hashing. Applications of Hashing: finding
+ duplicates, set intersection. Tries: implementation of Map ADT using tries.
+Text books
+  1. Ellis Horowitz, Sartaj Saini, Fundamentals of Data Structures, University Press.
+  2. R.B. Patel, Expert Data Structures with C, Khanna Book Publishing Company,
+      New Delhi, 4th Edition.
+Reference books/online Resources
+  1. Thomas H Cormen, Charles E Lieserson, Ronald LRivest and Clifford Stein,
+  Introduction to Algorithms, 4th Edition, , MIT Press/McGraw-Hill.
+  2. Richard F. Gilberg, Behrouz A. Forouzan, Data Structures: A Pseudocode Approach
+  withC, 2/e, Cengage Learning.
+  3. Aho A. V., J. E. Hopcroft and J. D. Ullman, Data Structures and Algorithms,
+  PearsonPublication.
+  4. Tremblay J. P. and P. G. Sorenson, Introduction to Data Structures with Applications,
+  Tata McGraw Hill.
+  5. Peter Brass, Advanced Data Structures, Cambridge University Press.
+  6. Lipschuts S., Theory and Problems of Data Structures, Schaum’s Series.
+  7. Wirth N., Algorithms + Data Structures = Programs, Prentice Hall.
+  8. NPTEL video series, Data-structures and Algorithms, Instructor: Naveen Garg.
+
+================================================================================
+S3 | 24ERT305 | Sensor & Sensor Circuits
+================================================================================
+24ERT305             SENSOR & SENSOR CIRCUITS                 2      1 0 0 2 3        2024
+
+Preamble: This course covers the constructions and working principle of different types of
+sensors and sensor circuits. It includes operating principles of sensors and its design, optical
+sensing mechanism, instrumentation amplifier, capacitance measurement and signal
+conditioning. This course also gives an elementary knowledge of signal conditioning.
+
+Prerequisite: NIL
+Course Outcomes: After the completion of the course the student will be able to:
+CO 1 Identify appropriate sensor for particular application [Understand]
+CO 2 Understand various Temperature and flow sensors [Understand]
+CO 3 Understand various Optical sensing mechanisms [Understand]
+CO 4 Design capacitor measurement unit [Apply]
+CO 5 Describe the principles of analog and digital signal conditioning techniques
+     [Understand]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: Introduction to measurements and sensors
+ Instruments: Classifications, applications, essentials of indicating instruments –
+ deflecting, damping, controlling torques, elements of a generalized measurement
+ system, -errors in measurement.
+ Introduction to sensors, Need of sensors in the modern world, Overview of
+ Sensors- Sensor fundamentals, characteristics, classification, performance and
+ error analysis
+ MODULE II: Temperature and flow sensor
+Temperature sensors- thermos-resistive, thermoelectric-simple numerical problems,
+Piezoelectric temperature sensor. Flow sensors: pressure gradient technique, thermal
+transport, ultrasonic, electromagnetic and Laser anemometer. coriolis mass flow sensor.
+  MODULE III: Optical sensors and Biomedical Sensors
+ Electronic and Optical properties of semiconductor as sensors, LED, Semiconductor
+ lasers, Fiber optic sensors, Photo multipliers, photoconductive detectors, Charge
+ Coupled devices (CCDs), CMOS sensors.
+ Biomedical sensors – EEG, ECG, EMG.
+ MODULE IV: Position, Direction, Displacement sensor
+ Potentiometric and capacitive sensors, LVDT – simple numerical problems, RVDT, Hall
+ effect sensor. Operational Amplifiers-characteristics (slew rate, CMRR). Switched
+ capacitor amplifier, Practical designing of a capacitor measurement circuit.
+ MODULE V: Signal conditioning
+ Analog and Digital Signal Conditioning - Principles of analog signal conditioning, Signal-
+ Level and Bias Changes, Linearization, Conversions, Hardware and Software of Data
+ Acquisition System (DAS)
+Text books
+ 1. Robert B. Northrop, “Introduction to Instrumentation and Measurement, 3rd
+    Edition”, Publisher: CRC – Press – Taylor and Francis Group.
+ 2. Clarence W. de Silva, “Sensor Systems. Fundamentals and Applications”, Publisher:
+    CRC – Press- Taylor and Francis Group.
+Reference books
+    1. Paul Horowitz and Winfield Hill, The Art of Electronics (2nd Edition), Cambridge
+       University Press, 1992.
+    2. Curtis D. Johnson, Process Control Instrumentation Technology, 6th Edition”, ,
+       Publisher: Prentice Hall International Edition.
+    3. John G. Webster, “Measurement, Instrumentation, and Sensors Handbook”,
+       Publisher: CRC – Press – Taylor and Francis Group.
+    4. Prof. M.K. Gunasekaran, Circuits for Analog System Design (NPTEL) -, IISc
+       Bangalore.
+
+================================================================================
+S3 | 24HUT310 | Life Skills and Professional Ethics
+================================================================================
+
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+                      MODULE 1 (FOUNDATION OF LIFE SKILLS)
+Understanding Life Skills: Meaning and Significance of Life Skills-WHO-Identified Life Skills-
+Life skills for professionals
+Self-awareness: Definition and Need-Tools and Techniques of Self-awareness
+Stress Management: Stress, reasons and effects- stress diaries- Four A's of stress
+management
+Coping with emotions: Identifying and managing emotions- PATH method and relaxation
+techniques
+(Group activities for self awareness and stress management)
+    MODULE 2 (21ST CENTURY SKILLS AND PROBLEM-SOLVING TECHNIQUES)
+21st Century Skills: Creativity, Critical Thinking, Collaboration, Problem Solving, Decision
+Making- Lateral Thinking- Critical thinking Vs Creative thinking
+Problem Solving Techniques: Six Thinking Hats- Mind Mapping- Forced Connections-
+Scientific temperament and Logical thinking with case studies. (Activity based learning)
+
+                   MODULE 3 (GROUP DYNAMICS AND LEADERSHIP)
+Group and Team Dynamics: Composition, Formation-Problem Solving in Groups-Group vs
+Team, Team Dynamics- Managing team performance(Activity based learning)
+Leadership: Leadership Framework -Types of Leadership- VUCA Leadership- Transactional
+vs Transformational Leaders
+                                MODULE 4 (HUMAN VALUES)
+Morals, values and Ethics – Integrity- Academic integrity-Work Ethics- Service Learning- Civic
+Virtue- Respect for others- Living peacefully- Caring and Sharing- Honestly- courage-
+Cooperation commitment- Empathy-Self Confidence -Social Expectations.
+Case study on Civil Engineering disasters (Include study of Ethical issues in a recent disaster)
+Code of Conduct in Engineering profession.
+                      MODULE 5 (RESPONSIBILITIES & RIGHTS)
+Collegiality and loyalty – Managing conflict- Respect for authority- Collective bargaining-
+Confidentiality-Role of confidentiality in moral integrity-Conflicts of interest- Occupational
+crime- Professional rights-Employee right- IPR Discrimination
+Global ethical issues- Business ethics, Computer Ethics, Environment ethics – Role in
+technological development-Engineers as Managers- Consulting Engineers- Engineers as
+Expert witnesses and advisors.
+Text books
+   1. Remesh S., Vishnu R.G., "Life Skills for Engineers", Ridhima Publication, First Edition
+       2016
+   2. ICT Academy of Kerala, "Life Skills for Engineers", McGraw Hill Education (India)
+       Private Ltd., 2016
+   3. Mike W Martin and Roland Schinzinger, Ethics in Engineering,4th edition, Tata
+       McGraw Hill Publishing Company Pvt. Ltd, New Delhi,2014.
+Reference books
+   1. Shiv Khera, You Can Win, Macmillan Books, New York, 2003
+   2. Barun K. Mitra, “Personality Development & Soft Skills”, Oxford Publishers, Third
+      impression, 2017.
+   3. Shalini Verma, “Development of Life Skills and Professional Practice”; First Edition;
+      Sultan Chand (G/L) & Company, 2014
+   4. Charles D Fleddermann, Engineering Ethics, Pearson Education/ Prentice Hall of
+      India, New Jersey, 2004.
+   5. Charles E Harris, Michael S Protchard and Michael J Rabins, Engineering Ethics-
+      Concepts and cases, Wadsworth Thompson Learning, United states,2005.
+   6. Guidelines for Professional Conduct for Civil Engineers ASCE, 2008
+
+================================================================================
+S3 | 24ESP307 | System Simulation & Virtual Instrumentation Lab
+================================================================================
+24ESP307        SYSTEM SIMULATION AND VIRTUAL                                  Introduction
+                      INSTRUMENTATION LAB                  1    0 2 0 2 2            2024
+Preamble: This course introduces students to the principles and techniques of system
+simulation and virtual instrumentation in the context of electrical engineering applications.
+Students will learn to model electrical systems, perform simulations, and develop virtual
+instruments for data acquisition, analysis, and control
+
+Prerequisite: Introductory courses in electrical circuits and electronics
+Basic programming knowledge
+Course Outcomes: After the completion of the course the student will be able to
+ CO 1 Understand the principles of system simulation (Understand).
+ CO 2 Develop mathematical models for electrical systems (Analyze).
+ CO 3 Analyze and interpret simulation results (Apply).
+ CO 4 Apply virtual instrumentation techniques to data acquisition and analysis (Apply).
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+MODULE I: Introduction to Electrical Circuit Simulation
+Overview of system simulation-Importance of system simulation- Advantages and
+disadvantages of simulation-Types of simulation problems-DC simulation-Transient
+Simulation-AC simulation-Digital Circuit Simulation-Sensitivity analysis- noise analysis.
+Examples.
+MODULE II: Introduction to MATLAB
+Introduction to MATLAB, Variables, arrays, conditional statements, loops, functions, m-
+files, plots and various Toolbox familiarization. Solution of ordinary differential equations-
+ODE Solvers
+MODULE III: Creating subsystems using MATLAB/SIMULINK
+Introduction To MATLAB SIMULINK– Importance-SIMULINK Interface- Libraries & Tools-
+Sources & Sinks-Building Systems-Mathematical Modeling-Converting Mathematical Model
+into SIMULINK Model. Realtime Modeling exercises using Simulink.
+MODULE IV: Electronic Instrumentation
+Basics of digital measurements: A/D and D/A Converters-Instrumentation amplifier-
+comparators and function generators-elements of digital multimeter-Hall effect sensor-clamp
+on meter-solid state energy meter-frequency, phase angle and time period measurement-
+Digital Storage Oscilloscope-Sample and Hold circuits
+MODULE V: Introduction to Virtual Instrumentation
+Introduction to virtual instrumentation- Virtual instrumentation tools -Building virtual
+instruments for data acquisition and control, arrays, clusters, graphs, charts, programming
+techniques, string operation, data logging. Data acquisition methods-DAQ hardware, PC
+hardware; Structure, Operating system, ISA, PCI, USB, PCMICA buses, Instrumentation
+buses. IEEE 488.1
+Text books
+1. M. B. Patil, V. Ramanarayanan and V. T. Ranganathan, “Simulation of Power
+   Electronic
+   Circuits”, Narosa Publishing House.
+2. Smith, J. R. (2020). MATLAB for Engineers. Wiley
+3. Scientific Computing using Matlab, NPTEL
+4. Clarence W. de Silva, “Sensor Systems. Fundamentals and Applications”, CRC –
+   Press- Taylor and Francis Group.
+5. Jeffrey, Travis, and Kring Jim. "LabVIEW for everyone: Graphical programming
+  made easy and fun." Prentice Hall PTR (2006).
+
+Reference books
+1. John G. Webster, “Measurement, Instrumentation, and Sensors Handbook”, CRC –
+    Press – Taylor and Francis Group.
+2. https://in.mathworks.com/products/simulink.html?s_tid=hp_ff_p_simulink
+3. Robert B. Northrop, “Introduction to Instrumentation and Measurement, 3rd Edition”,
+    CRC – Press – Taylor and Francis Group.
+
+================================================================================
+S4 | 24ERT401 | Computer Organization and Architecture
+================================================================================
+24ERT401
+                           ARCHITECTURE                      3     1 0 0 3 4             2024
+Preamble: The basic objective of this course is to lay the foundation of hardware organization
+of digital computers. The basic organizational concepts of Processor, Control Unit, Memory
+and I/O units are systematically included in this course. The knowledge on interplay between
+various building blocks of computer is also covered in this syllabus.
+Prerequisite: Nil
+Course Outcomes: After the completion of the course the student will be able to
+CO 1 Explain the fundamentals of the architecture and bus structure of a computer to do
+     data transfer [Understand]
+CO 2 Understand the design of control units for different type of architectures
+     [Understand]
+CO 3 Illustrate the design of ALU for various arithmetic and logic operations [Understand]
+CO 4 Understand memory organization, Cache memory and virtual memory techniques.
+     [Understand]
+CO 5 Distinguish I/O organization and I/O interfacing techniques. [Understand]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: Basic Structure of Computers
+ Basic Structure of Computers- functional units--Von-Neumann architecture- basic
+ operational concepts, Introduction to buses, single bus and multiple bus organization.
+ Representation of Instructions: Instruction formats -Operands- Addressing modes.
+ Processor Unit: Fundamental Concepts- single bus and Multiple bus organization of
+ CPU, instruction cycle.
+ MODULE II: Processor and Control Unit
+ Control Unit: Memory read and memory write operations - Data transfer using registers.
+ Hardwired Control, Micro programmed Control, Execution of a complete instruction -
+ sequencing of control signals. Horizontal and vertical micro instructions. Instruction set
+ architectures - CISC and RISC architectures
+ MODULE III: Data representation
+ Data representation: Signed number representation, fixed and floating-point
+ representations, character representation. Computer Arithmetic: Integer Addition and
+ Subtraction - Array Multiplier, Booths Multiplication- Division- non- restoring and
+ restoring techniques.
+ MODULE IV: Memory Organization
+ Memory Organization: - Memory cells- Basic Organization. Memory hierarchy –
+ Content addressable memory, Caches – Cache performance - Virtual memory –
+ Common framework for memory hierarchies.
+ Introduction to Pipelining- classification of pipeline processors, instruction and
+ Arithmetic pipelines (Design examples not required), Pipeline Hazards
+ MODULE V: Input/output organisation
+ Input/output organisation- Characteristics of I/O devices, Data transfer schemes -
+ Programmed controlled I/O transfer, Interrupt controlled I/O transfer. Organization of
+ interrupts - vectored interrupts – Servicing of multiple input/output devices –Polling and
+ daisy chaining schemes. Direct memory accessing (DMA). Modern
+ Processors.
+Text books
+   1. Hamacher C., Z. Vranesic and S. Zaky, Computer Organization, 5/e, McGraw Hill,
+       2011.
+   2. William Stallings, Computer Organization and Architecture: Designing for
+       Performance, Pearson, 9/e, 2013.
+
+Reference books
+ 1. Patterson D.A. and J. L. Hennessey, Computer Organization and Design, 5/e, Morgan
+     Kauffmann Publishers, 2013.
+ 2. Heuring V. P. and Jordan H. F., Computer System Design and Architecture, Addison
+     Wesely
+ 3. Mano M. M., Digital Logic & Computer Design, 3/e, Pearson Education, 2013.
+ 4. Chaudhuri P., Computer Organization and Design, 2/e, Prentice Hall, 2008.
+ 5. Rajaraman V. and T. Radhakrishnan, Computer Organization and Architecture,
+     Prentice Hall, 2011
+ 6. NPTEL Link: https://onlinecourses.nptel.ac.in/noc20_cs64/preview
+
+================================================================================
+S4 | 24ERT402 | Signals & Systems
+================================================================================
+24ERT402               SIGNALS AND SYSTEMS                                          Introduction
+                                                            2    1 0   0   2 3         2024
+Preamble: The course introduces the fundamentals of signals and systems. The convolution
+operation of continuous time and discrete time signals are discussed. The frequency domain
+representation and analysis using Laplace Transform, Fourier Transform and Z Transform
+are also introduced.
+
+Prerequisite: Nil
+Course Outcomes: After the completion of the course the student will be able to
+CO1 Express analytically and graphically various signals and its operations. [Apply]
+CO2      Classify systems by analyzing its properties. [Apply]
+CO3      Apply convolution operation on signals [Apply]
+CO4      Analyze continuous time systems using Laplace transform. [Analyze]
+CO5      Apply Fourier analysis of signals. [Analyze]
+CO6      Analyze discrete time systems using Z-transform [Analyze]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: Introduction to Signals and Systems
+
+
+Introduction to signals and systems -Elementary signals – unit step, unit ramp, unit impulse
+- properties, real and complex exponentials, sinusoidal.
+Classification of signals – Continuous Time and Discrete Time, Even and Odd, Causal and
+Noncausal, Periodic and Aperiodic, Power and Energy, Deterministic and Random signals.
+Basic operations on signals – reversal, shifting, scaling (both time and amplitude).
+Concept of system - Properties of systems - linearity, time invariance, causality, memory
+stability, invertibility – Numerical problems.
+Use simulation platforms (MATLAB / Scilab) to demonstrate elementary signals and it
+operations (HomeWorks / Assignments only).
+ MODULE II: Convolution and Laplace Transform Analysis
+ Convolution integral – Analytical method. Representation of LTI systems - Impulse
+response representation – Differential    equation representations of LTI systems.
+Overview of Laplace Transform - Laplace transform analysis of systems – Relation between th
+transfer function and differential equation.
+Determining the time domain response from transfer function – Numerical problems on
+electrical networks.
+Use simulation platforms (MATLAB / Scilab) to obtain time domain response from transfe
+function. (HomeWorks / Assignments only).
+ MODULE III: Fourier Representation and Sampling of Signals.
+Fourier representation of continuous time signals – Fourier Series – Harmonic analysis of
+common signals
+Fourier transform – Existence – properties of FT, Frequency response of LTI systems
+Sampling process- sampling theorem– Aliasing – Nyquist rate.
+Signal reconstruction- Zero order and First order hold circuits.
+Use simulation platforms (MATLAB / Scilab) to obtain Fourier Series / Transform of
+common signals. (HomeWorks / Assignments only).
+ MODULE IV: Discrete domain representation of signals and systems.
+Difference equation representations of LTI systems - Discrete forms of representing
+systems – Direct form I and II, Cascade, Parallel forms.
+Fourier representation of discrete time signals - Discrete Fourier series – properties.
+Discrete time Fourier Transform – properties of DTFT. Frequency response of Discrete
+Time systems.
+Use simulation platforms (MATLAB / Scilab) to obtain Discrete Fourier Series /
+Transform of common signals. (HomeWorks / Assignments only).
+MODULE V: Discrete Convolution and Z Transform Analysis
+ Discrete convolution- methods and its properties.
+  Z Transform - Region of convergence- Properties of the Z transform, Inverse ZT –Long
+division, Partial Fraction methods.
+Z-transfer function- Analysis of difference equation of LTI systems – Mapping of Laplace-
+domain to Z-domain.
+Use simulation platforms (MATLAB / Scilab) to analyze discrete systems using Z-
+transform. (HomeWorks / Assignments only).
+Text books
+
+1. Haykin S. & Veen B.V., Signals & Systems, John Wiley, 2003
+2. Oppenheim A.V., Willsky A.S. & Nawab S.H., Signals and Systems, Tata McGraw Hill, 199
+3. Signals and Systems: I J Nagrarth- Tata McGraw Hill, 1986
+4. A. Anand Kumar. Signals and systems. PHI Learning Pvt. Ltd., 2012.
+Reference books
+1. Bracewell R.N., Fourier Transform & Its Applications, McGraw Hill, 1978
+2. Farooq Husain, Signals and Systems, Umesh pub.
+3. Papoulis A., Fourier Integral & Its Applications, McGraw Hill, 1962
+4. Taylor F.H., Principles of Signals & Systems, McGraw Hill
+5. MIT Open Course Ware – Signals and Systems – Alan V Oppenheim
+(https://www.youtube.com/watch?v=KJnAy6hzetw&list=PL41692B571DD0AF9B)
+
+================================================================================
+S4 | 24ERP403 | Electrical Technology
+================================================================================
+24ERP403              ELECTRICAL TECHNOLOGY                                              Introduction
+                                                            2     1 2 0 4 4                       2024
+Preamble: The construction, working and relevant tests of electrical machines are introduced
+in this course. Both AC and DC machines are introduced. The machines include DC
+machines, Transformers, Induction machines, Synchronous machines, single phase motor
+and some special electrical machines.
+
+Prerequisite: NIL
+Course Outcomes: After the completion of the course the student will be able to
+ CO1 Analyse the performance of DC Machines [Apply]
+ CO2 Analyse the performance of transformers [Apply]
+ CO3 analyze the performance of Induction Machines [Apply]
+ CO4 Describe the working principle of synchronous machines [Understand]
+ CO5 Understand the working of single-phase induction motor [Understand]
+ CO6 Explain the working of special electrical machines. [Understand]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: DC Machines
+ DC Machines - principle of operation - emf equation - types of excitations - separately
+ excited, shunt and series excited DC generators, compound generators. General idea of
+ armature reaction, OCC and load characteristics.
+ Principles of dc motors - torque and speed equations. Principles of starting, losses and
+ efficiency.
+ MODULE II: Transformers
+ Transformers – principles of operations – emf equation- vector diagrams - losses and
+ efficiency – OC and SC tests. Equivalent circuits- efficiency calculations- maximum
+ efficiency – all day efficiency – simple numerical problems. Auto transformers -
+ instrument transformers.
+ MODULE III: Induction Machines
+ Three phase induction motors- slip ring and squirrel cage types- principles of operation
+ – rotating magnetic field- torque slip characteristics- no load and blocked rotor tests.
+ Circle diagrams- methods of starting – direct online – auto transformer – star delta and
+ rotor resistance starting.
+ MODULE IV: Synchronous Machines
+ Synchronous machines - types – emf equation of alternator – regulation of alternator
+ by emf method. Principles of operation of synchronous motors - methods of starting- V
+ curves- synchronous condenser.
+ MODULE V: Single Phase Motor and Special Electrical Machines
+ Single phase motors - principle of operation of single-phase induction motor – split
+ phase motor – capacitor start motor- stepper motor- universal motor – switched
+ reluctance motor.
+Text books
+  1. B. L. Theraja & A.K. Theraja, A text book of electrical technology, S.Chand and
+     Company, 2005.
+  2. H. Partab, Art and utilization of electrical energy, Bhandari Benevolent &
+     Educational Society, 1970.
+  3. V.K. Metha, Principles of electrical and electronics, S. Chand Publishing, 2006.
+  4. Guptha .B.R & Vandana Singal, Fundamentals of electric machines, New Age
+     International (P) Ltd., 2005.
+Reference books
+  1. Fitzgerald A. E., C. Kingsley and S. Umans, Electric Machinery, 6/e, McGraw
+     Hill, 2003.
+  2. Langsdorf M. N., Theory of Alternating Current Machinery, Tata McGraw Hill,
+     2001.
+  3. Deshpande M. V., Electrical Machines, Prentice Hall India, New Delhi, 2011.
+  4. A. E. Clayton & N. N. Hancock, The Performance and design of Direct Current
+     Machines, CBS Publishers & Distributors, New Delhi.
+  5. NPTEL Course on Basic Electrical Technology, Prof. L. Umanand, IISc Bangalore.
+
+================================================================================
+S4 | 24ERJ404 | Solid State Electronic Devices and Circuits
+================================================================================
+24ERJ404
+                          AND CIRCUITS                           2   0 2 2 5 5             2024
+Preamble:
+This course introduces the fundamentals of semiconductor devices and circuits. The
+learners will be familiarized with the working and characteristics of various semiconductor
+devices and integrated circuits. The course will enable students to design and analyze basic
+amplifier and oscillator circuits.
+Prerequisite: Fundamentals of Electrical Engineering
+Course Outcomes: After the completion of the course the student will be able to
+ CO 1 Design biasing scheme for transistor circuits [Apply]
+ CO 2 Design BJT and FET amplifier circuits [Apply]
+ CO 3 Design and analyze of oscillator circuits [Apply]
+ CO 4 Design and analyze various OPAMP circuits [Apply]
+ CO 5 Design, develop and fabricate a functional analog electronic circuit [Create]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: h-parameter model of CE amplifier, Biasing of JFET and MOSFET
+ amplifiers
+ Review of BJT characteristics-Operating point of a BJT-Transistor Biasing circuits:
+ Fixed bias, Collector to base bias, Voltage divider biasing-Derivation of stability factor
+ for voltage divider biasing-h parameter model of BJT in CE configuration-small signal
+ low frequency ac equivalent circuit of CE amplifier- Calculation of amplifier gains and
+ impedances using h parameter equivalent circuit.
+ Field Effect Transistors: Review of JFET and MOSFET (enhancement mode only) JFET
+ and MOSFET common source amplifier-Design using voltage divider biasing.
+ MODULE II : Frequency response of Amplifiers, Multistage amplifiers and Power
+ amplifiers
+ Frequency response of Amplifiers: Low and high frequency response of common emitter
+ amplifier - Role of coupling capacitors and emitter bypass capacitor-Internal
+ Capacitances at high frequency operations of BJT-Hybrid pi model of BJT-Gain
+ bandwidth product.
+ Multistage amplifiers: Direct, RC, transformer coupled Amplifiers, Applications.
+ Power amplifiers using BJT: Class A, Class B, Class AB - Conversion
+ efficiency derivation (Class A and Class B)-Distortion in power
+ amplifiers.
+ MODULE III : Feedback in amplifiers and basics of OPAMP
+ Feedback in Amplifiers-Effect of positive and negative feedbacks.
+ Oscillators: Barkhausen criterion–RC oscillators (RC Phase shift oscillator).
+ Operational Amplifiers: Fundamental differential amplifier- Modes of operation.
+ Properties of ideal and practical Op-amp - Gain, CMRR and Slew rate. Parameters of a
+ typical Op-amp IC 741.
+
+ MODULE IV : Operational amplifier circuits
+ Open loop and Closed loop Configurations, Concept of virtual ground. Negative feedback
+ in Op-amps. Inverting and non- inverting amplifier circuits. Summing and difference
+ amplifiers, Instrumentation amplifier.
+   OP-AMP Circuits: Differentiator and Integrator circuits-practical circuits –
+ Design – Comparators: Zero crossing and voltage level detectors, Schmitt
+ trigger. Comparator IC: LM311. Simulation examples using LTSpice
+
+ MODULE V : Waveform generation and Introduction to CMOS
+  Waveform generation using Op-Amps: Square, triangular and ramp generator circuits
+  using Op-Amp- Effect of slew rate on waveform generation - Timer 555 IC-internal
+  diagram- Astable and monostable multivibrators using 555 IC. Simulation examples
+  using LTSpice
+  Introduction to CMOS circuits- Advantages of CMOS – CMOS logic gates-
+  CMOS NOR- Basics of CMOS opamp.
+
+Text books
+  1. Bell D. A., Electronic Devices and Circuits, Prentice Hall of India, 2007
+  2. Malvino A. and D. J. Bates, Electronic Principles7/e, Tata McGraw Hill, 2010.
+  3. Boylestad R. L. and L. Nashelsky, Electronic Devices and Circuit Theory, 10/e,
+      Pearson Education India, 2009
+  4. Choudhury R., Linear Integrated Circuits, New Age International Publishers. 2008
+
+Reference books
+   1. Floyd T.L., Fundamentals of Analog Circuits,, Pearson Education, 2012
+   2. Robert T. Paynter and John Clemons, Paynter's Introductory electronic devices
+      & circuits, Prentice Hall Career & Technology, New Jersey
+   3. Millman J. and C. C. Halkias, Integrated Electronics: Analog and Digital
+      Circuits and Systems, Tata McGraw-Hill, 2010.
+
+   4. Streetman B. G. and S. Banerjee, Solid State Electronic Devices, Pearson Education
+
+   5. Gayakward R. A., Op-Amps and Linear Integrated Circuits, PHI Learning Pvt. Ltd.
+      2012
+   6. https://archive.nptel.ac.in/courses/108/102/108102112/
+
+================================================================================
+S4 | 24HUT435 | Engineering Economics
+================================================================================
+24HUT435         ENGINEERING ECONOMICS
+                                                             3 00       0 3    3   2024
+
+Preamble: To enable students to familiarize with principles of Economics and to acquaint
+the students with standard concepts tools and techniques that they are likely to find useful
+in their profession in decision making when employed in the firm/industry/corporation in
+public or private sector and to enhance their employability
+Prerequisite: NIL
+Course Outcomes: After the completion of the course the student will be able to
+CO 1       Apply suitable economic technique in decision making involving resource
+           allocation.
+CO 2       Analyze the revenue and cost components to enhance the performance of a firm.
+
+CO 3       Apply various forecasting techniques and to interpret the results.
+CO 4       Identify the key indicators of the economy, for analyzing the                   overall
+           performance, and its impact on various sections in the society.
+CO 5       Express an informed view regarding the potential of economics to help societies
+           achieve their environmental and trade goals.
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+MODULE I
+Engineering and Economics- Definition and scope of engineering economics-Basic
+concepts in economics- Scarcity and choice- Production possibility technique - Firms and
+its objectives-types of firms- Utility- Law of diminishing marginal utility-Demand and its
+determinants-Law of demand - Elasticity of demand-measurement of elasticity and its
+applications –supply-Law of supply and determinants of supply- Equilibrium- changes
+in demand and supply and its effects- Consumer surplus and producer surplus
+(concepts)- Taxation and deadweight loss.
+MODULE II
+Production function- Law of variable proportion- economies of scale – internal and external
+economies- Cost concepts- Social cost, private cost and external cost-Explicit cost and
+implicit cost-sunk cost-short run cost curves-long run cost curves-cost function-Revenue
+concepts- Shutdown point- Break even Analysis- problems.
+MODULE III
+Business forecasting- Elementary techniques- Social responsibility of business- Business
+financing- Sources of capital- Capital and Money market-International financing- Foreign
+direct investment- Foreign portfolio investment- Foreign Institutional investment. Basic
+principles of taxation- direct tax- indirect tax- GST- tax evasion.
+MODULE IV
+
+Indian economy brief overview of Post- Independence period- plans. Post reform growth –
+structure of productive activity- issues of inclusion.
+Circular flow of income-two sector and multi-sector model- National income- Three sectors
+of an economy- Methods of measuring national income-problems. Inflation- causes and
+effects-measures to control inflation-monetary methods-credit control methods, SLR, CRR,
+Open
+market operation-Repo and Reverse repo- Fiscal policies.
+MODULE V
+
+Economics and the Environment- Environment and development- Basic issues- The cost
+of economic growth and environmental degradation- sustainable policy approach-
+population growth and environmental linkages- policy measures.
+International Trade- Balance of payment- Components - Balance of payments deficit and
+devaluation. India’s external debt- measures to reduce external debt- Developing country
+borrowing and debt- capital inflows to developing countries- The problem of default.
+
+================================================================================
+S4 | 24MCT406 | Environmental Sciences
+================================================================================
+24MCT406                ENVIRONMENTAL SCIENCES                                       Introduction
+                                                              3    0 0 0 3 0             2024
+
+Preamble: Environmental Sciences is a specialized course designed to provide engineering
+students with a solid foundation in environmental principles and their application to
+engineering practice. The course aims to enhance students' understanding of the
+environmental challenges associated with engineering activities and equip them with the
+knowledge and skills to integrate environmental considerations into their future engineering
+work.
+
+
+Prerequisite: Nil
+Course Outcomes: After the completion of the course the student will be able to
+CO 1       Identify ecosystem components and threats (Apply level)
+CO 2       Describe the air and noise pollution problems and their sustainable solutions
+           (Understand)
+CO 3       Discuss the water and wastewater qualities and its treatment (Understand)
+
+
+CO 4       Explain the various types of solid waste and its management strategies
+           (Understand)
+CO 5       Associate causes and effects of climate change and suggest climate actions
+           (Evaluate)
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I (Environment and Ecosystem)
+ Introduction- Definition and scope of environmental science - Interdisciplinary nature
+ of the field.
+ Ecosystem structure and function- Biodiversity and its importance - Threats to
+ biodiversity (habitat loss, invasive species, overexploitation) - Man and Environment –
+ Health and Environment – Environmental Ethics.
+ Sustainable development – Social, economic and environmental dimensions- Need for
+ Sustainable development, Sustainable Development Goals (SDGs)
+
+   MODULE II (Air and Noise pollution)
+ Air pollutants – classification, sources and impacts - Clean air act and national ambient
+ air quality standards (NAAQS) - Air quality index - Emission reduction strategies -
+ Understanding and controlling indoor air pollution.
+ Ground level ozone and photochemical smog - Ozone layer depletion and the Montreal
+ Protocol, Global warming
+ Noise Pollution: Sources and effects of noise; quantification of noise pollution (Leq,
+ LAeq, etc.); Control and regulation rules in India
+   MODULE III (Water and Wastewater)
+ Sources and availability of freshwater- Water conservation strategies - Water pollution
+ and its impacts – Water Quality Standards (IS 10500) - Water quality index; Overview
+ of water treatment plant- Sustainable water use and conflicts over water resources.
+ Wastewater sources and quality –wastewater disposal – Oxygen sag curve - Applicable
+ wastewater discharge standards and typical flow schemes for sewage treatment plant –
+ Decentralized wastewater treatment- natural methods of wastewater treatment
+
+
+
+
+   MODULE IV (Solid and Hazardous Waste Management)
+ Waste Management: Consumerism and our throw-away culture; Characteristics of
+ municipal solid waste; CPHEEO guidelines for solid waste management (overview only);
+ Waste disposal methods (landfill, incineration, recycling) Sustainable practices in waste
+ management - Transition to zero waste lifestyle – Circular Economy
+ Hazardous and e-waste identification and management - Recycling and waste-to- energy
+ technologies – regulations for hazardous waste management in India
+ (overview only); Biomedical waste and its management
+
+
+
+ MODULE V (Climate Action)
+ Climate Change: Evidence, causes and effects, Carbon footprint, Global warming
+ potential; Role of IPCC in the understanding of climate change; Global climate
+ agreements – The United Nations Framework Convention on Climate Change, the Kyoto
+ Protocol, and the Paris Agreement
+ Mitigation strategies – carbon capture, utilization, and storage; adapting to climate
+ change.
+ Renewable Energy- solar energy, Biomass, Wind energy, New Energy sources
+
+Text books
+ 1. Gilbert M. Masters, Wendell P. Ela, Introduction to Environmental Engineering and
+     Science, 3rd Edition (2013), Pearson Education
+ 2. Mark Brusseau, Ian Pepper, Charles Gerba, Environmental and Pollution Science,
+     3rd Edition (2019), Elsevier
+ 3. Mackenzie L Davis, Introduction to Environmental Engineering, 5th Edition(2012),
+     McGraw hill Education (India)
+
+
+
+
+Reference books
+ 1. Robert A Corbett, Standard Handbook of Environmental Engineering,
+     2nd edition (1999), McGraw Hill.
+ 2. Mackenzie Davis and Susan Masten, Principles of Environmental Engineering &
+    Science, 4th Edition (2004), McGraw Hill
+ 3. B.C Punmia, Wastewater Engineering, 2nd edition (1998), Laxmi
+  Publications Pvt. Ltd.
+
+================================================================================
+S4 | 24ERP407 | Object Oriented Programming Using Java
+================================================================================
+24ERP407
+                           USING JAVA                      1       0 2 0 3 2      2024
+Preamble: The aim of the course is to provide hands-on experience on various object-oriented
+concepts in Java Programming. This course covers Object Oriented Principles, Object
+Oriented Programming in Java, Constructors, Inheritance, Exception handling,
+Multithreaded programming. The course promotes logical, computational, and creative
+thinking, to solve real-world problems effectively.
+
+Prerequisite: Basic C programming
+Course Outcomes: After the completion of the course the student will be able to
+ CO 1 Explain Java Programming Environment and Runtime Environment [Understand].
+ CO 2     Use data types, operators, control statements, arrays, and strings to formulate
+          algorithms and implement Java programs [Apply]
+ CO 3     Develop java programs using constructors, inheritance, polymorphism and
+          Interfaces [Apply]
+ CO 4     Illustrate how robust programs can be written in Java using multithreading and
+          exception handling mechanism [Apply]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: Introduction
+Introduction       to   Procedure     Oriented     and     Object     Oriented    Design    concepts
+Introduction to Java – Java programming Environment and Runtime Environment,
+Development                Platforms,               Java              program               structure
+Fundamentals of Classes and Objects.
+ MODULE II: Core Java Fundamentals
+Review of variables, Data types and Literals, Control Statements - Selection Statements,
+Iteration Statements and Jump Statements.
+
+Operators in Java Iteration Statements and Jump Statements. Type Conversion and
+Casting, Arrays, Strings,
+ MODULE III: Object Creation and Inheritance
+Object     Creation,    Object   Reference,      Introduction    to    Methods,    Access    Control
+Constructors, Inheritance – single level inheritance, multilevel inheritance, hierarchical
+inheritance, Keyword super and final.
+ MODULE IV: Polymorphism and Interface
+Polymorphism – Compile time polymorphism and Runtime polymorphism, Abstract class
+and methods, Interfaces.
+ MODULE V: Exception Handling and Multithreading
+Exception handling- Checked Exceptions, Unchecked Exceptions, Exception Handling
+Keywords.
+Multithreaded programming– The Java Thread Model, The Main Thread, Creating
+Thread, Suspending, Resuming and Stopping Threads.
+Text books
+  1. Herbert Schildt, Java: The Complete Reference, 8/e, Tata McGraw Hill, 2011
+  2. Balagurusamy E., Programming with JAVA a Primer, 5/e, McGraw Hill, Third
+         edition
+  3. Y. Daniel Liang, Introduction to Java Programming, 7/e, Pearson, 2013
+Reference books
+  1. Paul Deitel, Harvey Deitel, Java How to Program, Early Objects 11th Edition,
+      Pearson, 2018.
+  2. Nageswararao R., Core Java: An Integrated Approach, Dreamtech Press, 2008.
+  3. Sierra K., Head First Java, 2/e, O'Reilly, 2005.
+
+================================================================================
+S5 | 24ERT501 | Control Systems
+================================================================================
+24ERT501                CONTROL SYSTEMS                                                Introduction
+                                                               2    1 0   0   2 3          2024
+Preamble: Modelling of physical systems like electrical, mechanical, electromechanical
+systems. Development of equations of motion and analyzing dynamic response
+characteristics in time and frequency domains. Mathematical analysis and design of closed
+loop control systems.
+
+Prerequisite: Nil
+Course Outcomes: After the completion of the course the student will be able to
+CO1    Develop the mathematical model of physical systems [Analyse].
+CO2    Analyse the time domain responses of linear systems [Analyse].
+CO3    Apply Root locus technique to assess the performance of linear systems [Apply].
+CO4    Analyse the frequency domain response of given LTI systems [Analyse].
+CO5    Design compensators using time domain and frequency domain techniques [Analyse].
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+MODULE I: Modelling of Physical Systems
+ Introduction to open loop and closed loop control systems – Real time applications of open
+ loop (e.g. Traffic light controller, Fan regulator, automatic coffee maker) and closed loop
+ systems (e.g. Water level control, Air conditioning system, Launch vehicle attitude control).
+ Comparison of open loop and closed loop systems.
+ Transfer function of physical systems- Electrical, Mechanical, Electromechanical systems
+ - Force voltage and Force current analogy - Block diagram representation - block diagram
+ reduction – Signal flow graph – Mason’s gain formula.
+ MODULE II: Time Domain Analysis
+ Time domain analysis of control systems: Time domain specifications of transient and
+ steady state responses- Impulse and Step responses of first and second order systems.
+ Stability Analysis: Characteristic Equation - Poles and zeros - Concept of BIBO stability
+ and Asymptotic stability- Time response for various pole locations- stability of feedback
+ systems - Routh's stability criterion- Relative stability.
+ MODULE III: Root Locus Construction and Compensator Design
+ Root locus technique: Construction of Root locus- stability analysis- effect of addition of
+ poles and zeroes.
+ Design of Compensators: Design of lag, lead and lag-lead compensators using Root locus
+ technique.
+ PID controllers: PID tuning using Ziegler- Nichols methods.
+ MODULE IV: Frequency Domain Analysis
+ Frequency domain specifications- correlation between time domain and frequency domain
+ responses
+ Bode Plot: Construction- Concepts of gain margin and phase margin- stability analysis.
+ Polar plot: Concepts of gain margin and phase margin- stability analysis.
+ MODULE V: Compensator Design in Frequency Domain
+ Nyquist criterion: Nyquist plot- Stability criterion- Analysis.
+ Compensator design using Bode plot: Design of lag, lead and lag-lead compensator using
+ Bode plot. State space model, Solution of state equations of LTI systems.
+Textbooks
+   1. Nagarath I. J. and Gopal M., Control System Engineering, 5/e, New Age Publishers,
+      2009.
+   2. Ogata K, Modern Control Engineering, 5/e, Prentice Hall of India,1990.
+   3. Nise N. S, Control Systems Engineering, 6/e, Wiley Eastern, 1995.
+   4. Dorf R. C. and Bishop R. H, Modern Control Systems, 12/e, Pearson Education, 2011.
+   5. Bakshi, V. U., Bakshi, U. A. Control System Engineering. India: UNICORN Publishing
+      Group, 2020.
+Reference books
+   1. 1.Kuo B. C, Automatic Control Systems, 7/e, Prentice Hall of India, 1995.
+   2. Desai M. D., Control System Components, Prentice Hall of India, 2008.
+   3. Gopal M., Control Systems Principles and Design, 4/e, Tata McGraw Hill, 2012.
+   4. NPTEL Course on Control Systems by Prof. C S Shankar Ram, IIT Madras.
+   5. https://archive.nptel.ac.in/courses/107/106/107106081/
+
+================================================================================
+S5 | 24ERJ502 | Database Management Systems
+================================================================================
+24ERJ502
+                         SYSTEMS
+                                                      2       0 2 2 5 5       2024
+Preamble: This course provides a clear understanding of fundamental principles of
+Database Management Systems (DBMS) with special focus on relational databases
+to the learners. The topics covered in this course are basic concepts of DBMS, Entity
+Relationship (ER) model, Relational Database principles, Relational Algebra,
+Structured Query Language (SQL), Physical Data Organization, Normalization,
+Transaction Processing Concepts, and an alternative data management model,
+NoSQL. This course helps the learners to manage data efficiently by identifying
+suitable structures to maintain data assets of organizations and to develop
+applications that utilize database technologies.
+
+Prerequisite: Topics covered under the course Data Structures, Exposure to a
+High-Level Language like C.
+Course Outcomes: After the completion of the course the student will be able to
+CO1 Explain the need and basic characteristics of database management
+    systems
+    (Understand Level)
+CO2 Construct ER models for real-life database applications (Apply Level)
+CO3 Develop PL/SQL programs to perform multiple database operations (Apply
+    Level)
+CO4 Explain the fundamental principles of database storage structures and
+    access techniques (Understand Level)
+CO5 Explain the concepts of transaction processing, concurrency, and recovery
+    (Understand Level)
+CO6 Able to design, analyze, and develop database application programs for some
+    real-life scenarios using appropriate database management system: (Create
+    Level)
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+MODULE I: Introduction & Entity Relationship Model (4hrs)
+Concept & Overview of Database Management Systems (DBMS) - Characteristics of
+Database system, Database Users, structured, semi-structured and unstructured
+data. Data Models and Schema - Three Schema architecture. Database Languages,
+Database architectures, and classification.ER model - Basic concepts, entity set
+and attributes, notations, Relationships and constraints, cardinality, participation,
+notations, weak entities, relationships of degree 3.
+MODULE II: Relational Model and SQL DDL (5hrs)
+Structure of Relational Databases - Integrity Constraints, Synthesizing ER diagram
+to relational schema. Introduction to Relational Algebra - select, project, cartesian
+product operations, join - Equi-join, natural join. query examples, introduction to
+Structured Query Language (SQL), SQL data types, Data Definition Language
+(DDL), Table definitions and operations – CREATE, DROP, ALTER, INSERT,
+DELETE, UPDATE.
+MODULE III: SQL DML and Physical Data Organization (5hrs)
+SQL DML (Data Manipulation Language) - SQL queries on single and multiple
+tables, Nested queries (correlated and non-correlated), Aggregation and grouping,
+Views, and Assertions. PL/SQL-Functions, Procedures, Triggers, and Cursors.
+Physical Data Organization - Review of terms: physical and logical records, blocking
+factor, pinned and unpinned organization. Heap files, Indexing, Singe level indices,
+numerical examples, Multi-level indices, numerical examples, B- Trees & B+-Trees
+(structure only, algorithms not required), Extendible Hashing.
+MODULE IV: Database Normalization (4hrs)
+Different anomalies in designing a database, The idea of normalization, Functional
+dependency, Armstrong’s Axioms (proofs not required), Closures and their
+computation, Equivalence of functional Dependencies (FD), and Minimal Cover
+(proofs not required). First Normal Form (1NF), Second Normal Form (2NF), Third
+Normal Form (3NF), Boyce Codd Normal Form (BCNF).
+MODULE V: Transactions, Concurrency and Recovery, NoSQL, JDBC
+(6hrs)
+Transaction Processing Concepts - Overview of concurrency control, Transaction
+Model, Significance of concurrency control and recovery, Transaction States,
+
+
+
+System Log, and Desirable Properties of Transactions. Serial schedules, Concurrent
+and Serializable Schedules, Conflict equivalence and conflict serializability,
+Recoverable and cascade-less schedules, Locking, Two-phase locking, and its
+variations. Log-based recovery, Deferred database modification, check-pointing.
+
+Introduction to NoSQL Databases, Main characteristics of Key-value DB (examples
+from Redis), Document DB (examples from MongoDB) Main characteristics of
+Column-Family DB (examples from Cassandra), and Graph DB (examples from:
+Arango DB)
+Java Database Connectivity (JDBC) - JDBC overview, Creating and Executing
+Queries – create table, delete, insert, select.
+
+Textbooks
+1. Elmasri R. and S. Navathe, Database Systems: Models, Languages, Design
+and Application Programming, Pearson Education, 2013.
+2. Sliberschatz A., H. F. Korth and S. Sudarshan, Database System Concepts,
+6/e, McGraw Hill, 2011.
+Reference Books
+1. Adam Fowler, NoSQL for Dummies, John Wiley & Sons, 2015
+2. NoSQL Data Models: Trends and Challenges (Computer Engineering:
+Databases and BigData), Wiley, 2018
+3. Web Resource: https://www.w3resource.com/redis/
+4. Web Resource: https://www.w3schools.in/category/mongodb/
+5.WebResource:https://www.tutorialspoint.com/cassandra/cassandra_introductio
+n.h tm
+6. Web Resource: https://www.tutorialspoint.com/arangodb/index.htm
+
+NPTEL/SWAYAM Courses
+1.     Data Base Management System, IIT Kharagpur - Prof. Partha Pratim Das,
+Prof. Samiran Chattopadhyay, Prof. Kausik Datta
+
+================================================================================
+S5 | 24ERT503 | Artificial Intelligence: Theory and Applications
+================================================================================
+24ERT503
+                     THEORY AND APPLICATIONS            2       1     0    0   2 3              2024
+Preamble: The course aims to introduce the fundamental principles of intelligent systems.
+Problem-solving in both normal and complex environments is addressed through search
+algorithms. Additionally, the course covers typical applications in the emerging scenario,
+through data science and machine learning techniques.
+
+Prerequisite: NIL
+Course Outcomes: After the completion of the course the student will be able to
+CO 1      Explain the fundamental concepts of intelligent systems and their architecture.
+          [Understand]
+CO 2      Illustrate uninformed and informed search techniques for problem-solving in
+          intelligent systems. [Understand)
+CO 3      Solve Constraint Satisfaction Problems using search techniques. [Apply]
+CO 4      Illustrate different types of learning techniques used in intelligent systems
+          [Understand]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+
+MODULE I: Fundamentals to probabilistic reasoning in AI
+Bayes' Theorem, Random variables -Discrete and continuous random variables.
+Probability density function, Distribution function, Mean and Variance. Probability
+distribution- normal distribution.
+
+MODULE II: Introduction to AI
+Introduction – Foundations and applications of AI. Intelligent Agents – Structure of
+Agents, Agents and Environments, Case study- Vacuum Cleaner Problem.
+
+MODULE III: Problem Solving
+Uninformed search strategies-BFS, DFS, iterative DFS, uniform cost search. Informed search
+strategies -Best First Search, A* search algorithms, Case study- 8 Puzzle problem, N Queen
+Problem.
+
+MODULE IV: Introduction to neural networks
+Machine learning paradigms-supervised, semi-supervised, unsupervised, reinforcement
+learning. Introduction to neural network: Concept of perceptron and Artificial neuron, Weight
+initialization techniques, Feed Forward Neural Network, Back Propagation algorithm.
+
+CASE STUDY: Implementing neural networks algorithms using python
+
+
+MODULE V: Machine Learning
+Supervised learning- Linear Regression, Support Vector Machine, Optimal Separating hyper
+plane, Kernel functions. Bayes Rule, Naive Bayes Model, Classifier performance measures,
+ROC Curves. Unsupervised learning: Introduction to Clustering.
+CASE STUDY: Implementing machine learning algorithms using python
+Textbooks
+   1. Stuart Russell and Peter Norvig. Artificial Intelligence: A Modern Approach, 4th
+      Edition, Prentice Hall.
+   2. Ethem Alpaydın, “Introduction to Machine Learning (Adaptive Computation and
+      Machine Learning)”, MIT Press, 2004.
+Reference books
+  1. Nilsson N.J., Artificial Intelligence - A New Synthesis, Harcourt Asia Pvt. Ltd.
+  2. Kevin Murphy, Machine Learning: A Probabilistic Perspective (MLAPP), MIT
+      Press,2012
+  3. Han, Jiawei, and Micheline Kamber. Data Mining: Concepts and Techniques.
+      SanFrancisco: Morgan Kaufmann Publishers
+  4. Christopher M. Bishop, “Pattern Recognition and Machine Learning”, Springer, 2006
+
+================================================================================
+S5 | 24ERP504 | Operating Systems
+================================================================================
+24ERP504            OPERATING SYSTEMS                                                    Introduction
+                                                       2       1 2 0         4       4        2024
+Preamble: This course enables the students to learn the basic concepts and functions of
+operating systems. This course introduces the concepts of process management, memory
+management, file management and device management APIs and mechanisms available in an
+operating system. The course helps the learners to understand the foundation of operating
+system design so that they can extend their knowledge to detect and solve many problems
+occurring in operating system and to manage the computer resources appropriately.
+Prerequisite: Programming in C, Computer Organization & Architecture
+
+Course Outcomes: After the completion of the course the student will be able to
+
+CO 1    Explain the role, functionality         and    layering         of       the     systems   software
+        components.[Understand]
+CO 2    Demonstrate the concept of process management, process scheduling and the design of
+        OS API. [Apply]
+CO 3    Illustrate process synchronization mechanisms using Mutex Locks, Semaphores and
+        Monitors. [Apply]
+CO 4    Describe methods for effectively handling deadlocks in Operating Systems, including its
+        detection, prevention, mitigation, and recovery methods. [Understand]
+CO 5    Demonstrate the memory management algorithms using the details of the abstractions
+        and interfaces provided by the OS [Apply]
+CO 6    Explain the concepts of File System, secondary storage management, and Disk
+        Scheduling. [Understand]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+
+MODULE I: Introduction to Operating Systems
+Introduction to Operating Systems: Virtualizing the CPU, Virtualizing the memory,
+Concurrency, Persistence, Design Goals. Components of an OS, Types of OS, Operating System
+structure - Simple structure, Layered approach, Microkernel, Modules, Generalized view of
+System Calls, System boot process.
+
+MODULE II: Process Management
+Process Abstraction-Process, Process Creation, Process states, Process control block and
+Context Switch, Process control system calls -fork, wait, exec, getpid, getppid and variants. The
+limited direct execution model. Process Scheduling- Basic concepts, Scheduling queues,
+Schedulers, Scheduling algorithms- First come First Served, Shortest Job First, Priority
+scheduling, Round robin scheduling, Inter-process communication - shared memory systems,
+Message passing systems.
+
+MODULE III: Process Synchronization and Deadlocks
+Concurrency - Threads, Single threaded and multithreaded programming, Thread API, Process
+Synchronization – critical-section problem, Synchronization hardware, Mutex locks,
+Semaphores, Critical regions, Monitors. Deadlock – System model, Deadlock characterization,
+Methods for handling deadlocks, Deadlock prevention, Deadlock avoidance, Detection, Recovery
+
+MODULE IV: Memory Management
+. Address spaces, Memory view of a process -heap, stack, code, data Review of malloc and free
+system calls. Address Translation – Introduction to Dynamic Relocation Hardware Support.
+Segmentation, Free space Management, Paging, Virtual Memory – Demand Paging, Page
+Replacement Algorithms, Allocation, Thrashing.
+
+MODULE V: File and Storage Management
+File System: File concept - Attributes, Operations, types, structure – Access methods,
+Protection. File system implementation, Directory implementation. Allocation methods. Storage
+Management: Magnetic disks, Solid-state disks, Disk Structure, Disk scheduling, Disk
+formatting.
+Textbooks
+   1. Abraham Silberschatz, Peter Baer Galvin and Greg Gagne, “Operating System
+      Concepts”, John Wiley & Sons, Inc., 10th Edition, 2021.
+   2. Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau Arpaci , “Operating Systems:
+      Three Easy Pieces”, -Dusseau Books, LLC.
+      https://pages.cs.wisc.edu/~remzi/OSTEP/(online version)
+   3. Andrew S. Tannenbaum and Herbert Bos ,”Modern Operating Systems”, Pearson
+      Education India; 4th edition.
+Reference books
+   1. William Stallings, “Operating Systems – Internals and Design Principles”, 9th Edition,
+       Pearson, 2017.
+   2. Maurice J. Bac ,”Design of the UNIX Operating System”, Pearson Education India; First
+       edition
+   3. W. Richard Stevens, Stephen A. Rago, “Advanced Programming in the UNIX®
+       Environment”, Pearson Education India; Third edition
+   4.     Frans Kaashoek, Robert Morris, and Russ Cox,”Xv6, a simple Unix-like teaching
+          operating system”.
+           https://github.com/mit-pdos/xv6-public (x86 version)
+
+NPTEL/SWAYAM Course
+   1. Introduction to Operating Systems, IT Madras – Prof.Chester Rebeiro
+
+================================================================================
+S5 | 24HUT535 | Project Management and Finance
+================================================================================
+
+
+--- SYLLABUS & MODULES ---
+
+
+================================================================================
+S5 | 24MCT506 | Constitution of India
+================================================================================
+6         F   24MCT506   MC    Constitution of India        MOOC     3       1
+
+
+7         I   24ERT507   PCC   Software Engineering        2 0 0 0   2   2   2   100
+
+         24EEM509
+                                                                             4
+             /
+      M            MR/                                                       /
+         24EEM510       Minor/ Honours/
+8     /H           HR/R                                    4 0 0 0           4   40    60
+             /          Remedial
+      /R            L                                                        /
+         24ERH509/
+                                                                             0
+         24ERH510
+
+                               TOTAL                                 21 22 21
+
+
+
+
+                                             Minor
+
+     S5           24EEM509     Smart Grid              24EEM510 Battery Technology
+
+
+
+
+                                            Honours
+
+               24EEH509/ Linear Integrated
+     S5                                          24ERH510      Data Encryption
+               24ERH509 Circuits
+                                                                L T     P J   S   C       Year of
+24ERT501                CONTROL SYSTEMS                                                Introduction
+                                                               2    1 0   0   2 3          2024
+Preamble: Modelling of physical systems like electrical, mechanical, electromechanical
+systems. Development of equations of motion and analyzing dynamic response
+characteristics in time and frequency domains. Mathematical analysis and design of closed
+loop control systems.
+
+Prerequisite: Nil
+Course Outcomes: After the completion of the course the student will be able to
+CO1    Develop the mathematical model of physical systems [Analyse].
+CO2    Analyse the time domain responses of linear systems [Analyse].
+CO3    Apply Root locus technique to assess the performance of linear systems [Apply].
+CO4    Analyse the frequency domain response of given LTI systems [Analyse].
+CO5    Design compensators using time domain and frequency domain techniques [Analyse].
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+MODULE I: Modelling of Physical Systems
+ Introduction to open loop and closed loop control systems – Real time applications of open
+ loop (e.g. Traffic light controller, Fan regulator, automatic coffee maker) and closed loop
+ systems (e.g. Water level control, Air conditioning system, Launch vehicle attitude control).
+ Comparison of open loop and closed loop systems.
+ Transfer function of physical systems- Electrical, Mechanical, Electromechanical systems
+ - Force voltage and Force current analogy - Block diagram representation - block diagram
+ reduction – Signal flow graph – Mason’s gain formula.
+ MODULE II: Time Domain Analysis
+ Time domain analysis of control systems: Time domain specifications of transient and
+ steady state responses- Impulse and Step responses of first and second order systems.
+ Stability Analysis: Characteristic Equation - Poles and zeros - Concept of BIBO stability
+ and Asymptotic stability- Time response for various pole locations- stability of feedback
+ systems - Routh's stability criterion- Relative stability.
+ MODULE III: Root Locus Construction and Compensator Design
+ Root locus technique: Construction of Root locus- stability analysis- effect of addition of
+ poles and zeroes.
+ Design of Compensators: Design of lag, lead and lag-lead compensators using Root locus
+ technique.
+ PID controllers: PID tuning using Ziegler- Nichols methods.
+ MODULE IV: Frequency Domain Analysis
+ Frequency domain specifications- correlation between time domain and frequency domain
+ responses
+ Bode Plot: Construction- Concepts of gain margin and phase margin- stability analysis.
+ Polar plot: Concepts of gain margin and phase margin- stability analysis.
+ MODULE V: Compensator Design in Frequency Domain
+ Nyquist criterion: Nyquist plot- Stability criterion- Analysis.
+ Compensator design using Bode plot: Design of lag, lead and lag-lead compensator using
+ Bode plot. State space model, Solution of state equations of LTI systems.
+Textbooks
+   1. Nagarath I. J. and Gopal M., Control System Engineering, 5/e, New Age Publishers,
+      2009.
+   2. Ogata K, Modern Control Engineering, 5/e, Prentice Hall of India,1990.
+   3. Nise N. S, Control Systems Engineering, 6/e, Wiley Eastern, 1995.
+   4. Dorf R. C. and Bishop R. H, Modern Control Systems, 12/e, Pearson Education, 2011.
+   5. Bakshi, V. U., Bakshi, U. A. Control System Engineering. India: UNICORN Publishing
+      Group, 2020.
+Reference books
+   1. 1.Kuo B. C, Automatic Control Systems, 7/e, Prentice Hall of India, 1995.
+   2. Desai M. D., Control System Components, Prentice Hall of India, 2008.
+   3. Gopal M., Control Systems Principles and Design, 4/e, Tata McGraw Hill, 2012.
+   4. NPTEL Course on Control Systems by Prof. C S Shankar Ram, IIT Madras.
+   5. https://archive.nptel.ac.in/courses/107/106/107106081/
+
+================================================================================
+S5 | 24ERT507 | Software Engineering
+================================================================================
+24ERT507
+                                                        2       0 0       0   2       2       2024
+Preamble: This course empowers to comprehend the principles and operations of software
+engineering. It introduces key concepts such as software models, software life cycles,
+software management, and other aspects integral to software development. The key concepts
+of this would enable to adeptly address a wide array of problems associated with software
+development.
+
+Prerequisite: Knowledge in Software Development Life Cycle (SDLC), Problem-Solving Skills
+
+Course Outcomes: After the completion of the course the student will be able to
+ CO1      Differentiate Traditional and Agile Software Development approaches [Understand]
+
+ CO2  Prepare Software Requirement Specification, Planning and Design for a given problem
+      [Apply]
+ CO 3 Illustrate the significance of design patterns and implementation terms in software
+      development [Apply)
+ CO 4 Prepare testing, maintenance and Develops strategies for a project. [Apply level)
+
+ CO 5 Make use of software project management concepts while planning, estimation,
+      scheduling, tracking and change management of a project, with a traditional/agile
+      framework [Apply]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+MODULE I: Introduction to Software Engineering
+
+ Introduction to Software Engineering - Professional software development, Software
+ engineering ethics. Software Life Cycle Models- The waterfall model - Agile model- Spiral
+ Model: Phases of Spiral model.
+
+MODULE II: Requirement analysis, Planning and Design
+
+ Planning phase – project planning objective, software scope, empirical estimation
+ models- COCOMO, single variable model, staffing and personal planning.
+
+ Design phase – design process, principles, concepts, effective modular design-Top down,
+ Bottom-up strategies, stepwise refinement.
+
+Module III: Implementation and Testing
+
+ Design Engineering: Design process and design quality, design concepts, the design
+ model. Creating an architectural design: software architecture, data design, architectural
+ styles and patterns, architectural design, conceptual model of UML.
+
+ Testing Strategies: A strategic approach to software testing, test strategies for
+ conventional software, black-box and white-box testing, validation testing, system
+ testing, the art of debugging.
+
+  Case studies: An insulin pump control system Mentcare- a patient information system
+ for mental health care.
+
+MODULE IV: Maintenance and Project Scheduling
+
+Maintenance-Overview of maintenance process, types of maintenance. Risk management:
+software risks - risk identification-risk monitoring and management. Project
+Management concept: People – Product-Process-Project.
+
+Project scheduling and tracking: Basic concepts-relation between people and effort-
+ defining task set for the software project-selecting software engineering task.
+ Case study: Project planning using JIRA software
+
+MODULEV: Software Quality, Process Improvement and Technology trend
+
+Software Quality, Management system, Achieving Software Quality Elements of Software
+ Quality Assurance, SQA Tasks, Software measurement and metrics. Software Process
+ Improvement (SPI), SPI Process CMMI process improvement framework, ISO 9001:2000
+ for Software. Cloud-based Software - Virtualization and containers, Everything as a
+ service (IaaS, PaaS), Software as a service.
+
+Textbooks
+
+   1. Rajib Mall, Professor, Department of Computer Science and Engineering, Indian
+      Institute of Technology Kharagpur: Fundamentals of Software Engineering, FIfth
+      edition
+   2. Ian Sommerville, Software Engineering, Pearson Education, Tenth edition, 2015.
+   3. Roger S. Pressman, Software Engineering: A practitioner’s approach, McGraw
+      Hill publication, Eighth edition, 2014
+   4. Ian Sommerville, Engineering Software Products: An Introduction to Modern
+      Software Engineering, Pearson Education, First Edition, 2020.
+   5. 5. S.A. Kelkar, Software Project Management: A concise study, PHI, Third edition,
+      2012.
+
+Reference books
+
+   1. IEEE Std 830-1998 - IEEE Recommended Practice for Software Requirements
+       Specifications
+   2. IEEE Std 1016-2009 IEEE Standard for Information Technology—Systems Design—
+       Software Design Descriptions 53 COMPUTER SCIENCE AND ENGINEERING
+   3. David J. Anderson, Kanban, Blue Hole Press 2010
+   4. David J. Anderson, Agile Management for Software Engineering, Pearson, 2003
+   5. Walker Royce, Software Project Management: A unified framework, Pearson
+       Education, 1998
+   6. Steve. Denning, The age of agile, how smart companies are transforming the way work
+       gets done. New York, Amacom, 2018.
+   7. Satya Nadella, Hit Refresh: The Quest to Rediscover Microsoft’s Soul and Imagine a
+       Better Future for Everyone, Harper Business, 2017
+   8. Henrico Dolfing, Project Failure Case Studies: Lessons learned from other people’s
+      mistakes, Kindle edition
+   9. Walker Royce, Software Project Management: A unified frame work, Pearson
+   Education, 1998
+
+================================================================================
+S6 | 24ERP601 | Computer Networks
+================================================================================
+24ERP601           COMPUTER NETWORKS                               n
+                                                    2   0 2 0 4 3     2024
+Preamble: This course provides the learners a clear understanding of computer
+networks from local area networks to the global Internet. This course covers the
+physical aspects of computer networks, layers of OSI Reference model, and inter-
+networking. The course helps the learners to compare and analyze the existing
+network technologies and choose a suitable network design for a given system.
+Prerequisite: NIL
+Course Outcomes: After the completion of the course the student will be able to
+ CO1 Explain the fundamentals of different layered architectures and physical layer
+        characteristics of computer networks. [Understand]
+ CO2 Describe the basics of different application layer protocols. [Apply]
+ CO3 Illustrate the working of transport layer protocols and congestion control
+        methods. [Apply]
+ CO4 Explain the principles of network layer and network layer protocols. [Apply]
+ CO5 Explain the design issues of data link layer, link layer protocols, bridges and
+        Switches. [Understand]
+ CO6 Use different tools to illustrate the working of different network protocols.
+        [Apply]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: Introduction to Data Communication and Internet
+ Introduction to Data Communication - Modes of communication, Physical
+ topologies, Signal encoding, Multiplexing, Transmission media overview.
+ Performance indicators – Bandwidth, Throughput, Latency, Queuing time,
+ Bandwidth–Delay product. Basics of Internet, The Network Edge, The Network
+ Core, Protocol layers and their service models - The OSI reference model, The
+ TCP/IP reference model.
+ MODULE II: Application Layer
+ Principles of network applications, The Web and the HTTP, Electronic mail,
+ Multipurpose Internet Mail Extension (MIME), File Transfer Protocol (FTP), Domain
+ Name System (DNS), Simple Network Management Protocol. Peer-to-peer
+ applications - P2P file distribution. Video streaming and Content Distribution
+ Networks.
+ MODULE III: Transport Layer
+ Introduction and Transport Layer services, Multiplexing and Demultiplexing, UDP,
+ Principles of Reliable Data transfer – Go-Back-N and Selective Repeat, TCP,
+ Principles of Congestion Control, TCP Congestion control.
+ MODULE IV: Network Layer
+ Overview, Router, IPv4 and Addressing, Network Address Translation, IPv6, Routing
+ Algorithms – Link state and Distance Vector Routing, Open Shortest Path First
+ Protocol (OSPF), Border Gateway Protocol (BGP), Internet Control Message Protocol
+ (ICMP), Address Resolution Protocol (ARP), Reverse Address Resolution Protocol
+ (RARP), Bootstrap Protocol (BOOTP), Dynamic Host Configuration Protocol (DHCP).
+ MODULE V: Data link layer
+ Services provided by DLL, Error Detection and Correction Techniques, Sliding
+ window protocols, High-Level Data Link Control (HDLC) protocol. Medium Access
+ Control (MAC) sublayer – Channel allocation problem, Multiple access protocols,
+ Ethernet, Wireless LANs - 802.11, Repeaters, Hubs, Bridges, Switches, Routers and
+ Gateways.
+Text books
+    1. J.F. Kurose and K.F. Ross, Computer networking: A top-down approach, 6th
+       edition, Pearson, 2017.
+    2. Andrew S. Tanenbaum, Computer Networks, 4/e, PHI (Prentice Hall India).
+    3. Behrouz A Forouzan, Data Communication and Networking, 4/e, Tata
+       McGraw Hill
+
+NPTEL/SWAYAM Course
+Computer Networks and Internet Protocols, By Prof. Soumya Kanti Ghosh, Prof.
+Sandip Chakraborty, IIT Kharagpur
+
+================================================================================
+S6 | 24ERP602 | Embedded System Design and IoT
+================================================================================
+24ERP602          EMBEDDED SYSTEM DESIGN                               Introduction
+                            AND IOT                 2 0 2 0 4 3           2024
+ Preamble: This course extensively covers the architecture, programming, and
+ interfacing of 8051 microcontrollers. Additionally, its objective is to establish a
+ foundation for implementing Embedded and IoT systems using suitable hardware
+ and software tools.
+Prerequisite: Knowledge in digital electronics and C programming.
+Course Outcomes: After the completion of the course the student will be able to
+ CO 1 Understand the architecture of embedded systems, Microprocessor and
+          Microcontroller 8051.[Understand]
+ CO 2 Understand the assembly instruction set and basics of ALP and C
+          programming for 8051 [Understand]
+ CO 3 Understand various communication protocols in embedded systems.
+          Develop programming skills for using I/O ports, serial port and Timer in the
+          8051 microcontroller, and interface various I/O devices.. [Apply]
+ CO 4 Identify a real-world problem and propose a microcontroller-based solution
+          for the same using modern microcontrollers. [Apply]
+ CO 5 Design and implement IoT solutions in various real time applicaton domains
+          [Apply]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+
+ MODULE I: Introduction to Embedded Systems & 8051 Microcontroller
+
+ Embedded     systems-    Application      domain,      features        and   general
+ characteristics, Architecture of Embedded system. Basic architecture of a
+ microprocessor. Microprocessor versus microcontroller. 8051 Microcontroller:
+ Architecture, PSW, memory organization, special function registers, IO
+ ports, Addressing modes.
+
+ MODULE II: 8051 Microcontroller Instruction Set and Programming
+ Instruction set- Data transfer, Arithmetic, Logical, Branching – SJMP, AJMP,
+ LJMP – Basic ALPs. Embedded C Programming – Declaring variables, Example
+ programs in ALP and C.
+
+ MODULE III: Advanced Programming and I/O Interfacing
+ Time delay and I/O port programming :- Timer/Counter – registers and timer
+ modes, Timer/Counter Programming, Serial port programming using
+ 8051.Communication protocols: USART, SPI, I2C and CAN. Interfacing of I/O
+ devices - seven segment LED, LCD, ADC and DAC.
+
+ MODULE IV: Introduction to Advanced Micro Controllers and IoT
+ Introduction to ARM7 Micro Controller, comparison between RISC and CISC,
+ ARM7 architecture and flag register. Definition and characteristics of
+ Internet of Things (IoT), Physical Design of IoT, Overview of IoT Architecture,
+ Logical design of IoT, IoT Communication Models: Request-Response, Publish-
+ Subscribe, Push-Pull and Exclusive Pair, Applications of IoT.
+
+ MODULE V: Design of Embedded Systems and IoT
+ IoT Communication Networks and Protocols: MQTT, COAP protocols, BLE, Wi-Fi,
+ LORA, 3G/4G Technologies.
+ Design of Embedded Systems – Home Automation – Smart Agriculture –
+ Smart Cities – Smart Healthcare (Projects).
+Textbooks
+  1. Rajkamal, “Embedded System: Architecture, Programming and Design”,2nd
+      Edition Tata Mcgraw Hill, 2010
+  2. Mohamed Ali Mazidi, Janice GillispieMazidi, “The 8051 microcontroller and
+      embedded systems using Assembly and C”, second edition, Pearson/Prentice
+      hall of India.
+  3. Muhammad Ali Mazidi,Shujen Chen, Sepehr Naimi,Sarmad Naimi, “Embedded
+      Programming Using C Language”, 1st Edition, Freescale ARM Cortex-M.
+  4. Arshdeep Bahga, Vijay Madisetti Internet of Things – A hands-on approach,
+      Universities Press, 2015
+  5. B Ram, “Fundamentals of Microprocessors and Microcontrollers”, 9e, Dhanpat
+      Rai Publications, 2019.
+  6. Olivier Hersent, David Boswarthick, Omar Elloumi, “The Internet of Things: Key
+  7. applications and Protocols”, 2™ Edition, Wiley Publications, 2012.
+   1. Kenneth J. Ayala, “The 8051 microcontroller”, 3rd edition, Cengage Learning,
+       2010
+   2. Bhurchandi and Ray, Advanced Microprocessors and Peripherals, Third Edition
+    Tata McGraw Hill.
+3. Shibu, K.V., Introduction to Embedded Systems, 1st Ed., TMH, 2009
+4. Adrian McEwen and Hakim Cassimally, Designing the Internet of Things‖, John
+    Wiley and Sons Ltd, UK, 2014.
+5. David Hanes, Gonzalo Salgueiro, Patrick Grossetete, Rob Barton and Jerome
+    Henry IoT Fundamentals: Networking Technologies, Protocols and Use Cases
+    for Internet of Things, Cisco Press, 2017
+6. Rajkamal, Internet of Things: Architecture, Design Principles And Applications,
+    , McGraw Hill HigherEducation
+7. Kanta Rao B, Embedded Systems, 1st Ed., PHI 3. Frank Vahid & Tony Givargis,
+    Embedded System Design, 2nd Edition, John Wiley,
+8. Jonathan Valvano , Embedded Systems: Real-Time Operating Systems for ARM
+    Cortex-M Microcontrollers.
+9. Dr. OvidiuVermesan, Dr. Peter Friess, “Internet of Things: Converging
+    Technologies for Smart Environments and Integrated Ecosystems”, River
+    Publisher.
+10. Prof. Santanu Chattopadhyay, Microprocessors And Microcontrollers, IIT
+    Kharagpur Link: https://onlinecourses.nptel.ac.in/noc22_ee12/preview
+11. Prof. Dhananjay V. Gadre, Prof. Badri Subudhi Introduction to Embedded
+    System Design, Netaji Subhas University of Technology, IIT Jammu Link:
+    https://onlinecourses.nptel.ac.in/noc20_ee98/preview
+12. Embedded Systems Design by Prof. Anupam Basu, IIT Kharagpur Link:
+    https://onlinecourses.nptel.ac.in/noc23_cs54/preview
+13. Introduction to internet of things, by Prof. Sudip Misra, IIT Kharagpur Link :
+    https://onlinecourses.nptel.ac.in/noc21_cs17/preview
+
+================================================================================
+S6 | 24ERT603 | Power Electronics & Drives
+================================================================================
+24ERT603
+                       DRIVES                      2 1 0 0 2 3                 2024
+Preamble: The course aims to acquaint learners with various power semiconductor
+devices and their characteristics. It will give an understanding of the design and
+operation of diverse power electronic converters and will also instill competence in
+employing these converters to control electrical drives.
+
+Prerequisite: Nil
+Course Outcomes: After the completion of the course the student will be able to
+CO1 Understand the operation and characteristics of modern power semiconductor
+     devices [Understand].
+CO2 Analyse the working of line commutated converters [Apply].
+CO3 Explain the working of AC Voltage controllers, inverters and PWM techniques
+     [Understand].
+CO4 Design and analyse various dc-dc converters [Apply].
+CO5 Understand the operation of various dc and ac motor drives [Understand].
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+MODULE I: Power semiconductor devices
+ Introduction to Power Electronics-Scope and applications-power electronics vs
+ signal electronics- Structure and principle of operation of power devices- Power
+ diode, Power MOSFET & IGBT – switching characteristics - comparison. Basic
+ principles of wideband gap devices SiC, GaN - SCR- Structure, Static
+ characteristics & Switching (turn-on & turn-off) characteristics - di/dt& dv/dt
+ protection – Turn-on methods of SCR - Two transistor analogy- Gate triggering
+ circuits – Requirements of isolation and synchronization in gate drive circuits-
+ Opto and pulse transformer based isolation
+ MODULE II: Line commutated converters
+ Controlled Rectifiers (Single Phase) – Half-wave controlled rectifier with R load–
+ Fully controlled and half controlled bridge rectifier with R, RL and RLE loads
+ (continuous & discontinuous conduction) – Output voltage equation- related
+ simple problems- Controlled Rectifiers (3-Phase) - 3-phase half-wave controlled
+ rectifier with R load – Fully controlled & half-controlled bridge converter with RLE
+ load (continuous conduction, ripple free) – Output voltage equation-Waveforms for
+ various triggering angles (detailed mathematical analysis not required)
+ MODULE III: AC Voltage Controllers and Inverters
+ AC voltage controllers (ACVC) – 1-phase full-wave ACVC with R, & RL loads –
+ Waveforms – RMS output voltage, Input power factor with R load- Inverters –
+ Voltage Source Inverters– 1-phase half-bridge & full bridge inverter with R and RL
+ loads – THD in output voltage – 3-phase bridge inverter with R load – 120° and
+ 180° conduction modes–Voltage control in 1-phase inverters – Pulse width
+ modulation – Single pulse width, Multiple pulse width and Sine-triangle PWM
+ (unipolar & bipolar modulation) – Modulation Index - Frequency modulation ratio.
+ MODULE IV: DC-DC Converters
+ DC-DC converters – Step down and Step up choppers – Single-quadrant, Two-
+ quadrant and Four quadrant chopper – Pulse width modulation & current limit
+ control in dc-dc converters- Switching regulators – Buck, Boost & Buck-boost –
+ Operation with continuous conduction mode – Waveforms – Design of Power
+ circuits (switch selection, filter inductance and capacitance)
+ MODULE V: Power Electronic Control of Electric Drives
+ Electric Drive: Introduction to electric drives – Block diagram – advantages of
+ electric drives- types of load – classification of load torque- DC Drives: Single phase
+ semi converter and single phase fully controlled converter drives. Chopper
+ controlled DC drives- Single quadrant chopper drives- Regenerative braking
+ control- Two quadrant chopper drives- Four quadrant chopper drives- AC Drives:
+ Three phase induction motor speed control. Stator voltage control – stator
+ frequency control - Stator voltage and frequency control (V/f).
+Textbooks
+   1. Muhammad H. Rashid, Power Electronics Circuits, Devices and Applications,
+      Pearson Education
+   2. Daniel W. Hart, Power Electronics, Tata McGraw-Hill Education
+   3. P.S. Bimbhra, Power Electronics, Khanna Publishers, New Delhi
+Reference books
+    1. Mohan N., T. M. Undeland and W. P. Robbins., Power Electronics, Converters,
+       Applications & Design, Wiley-India
+    2. Fundamentals of Power Electronics, Erickson, Robert W., and Maksimovic,
+       Dragan.
+    3. Krein P. T., Elements of Power Electronics, Oxford University Press, 1998.
+    4. L. Umanand, Power Electronics – Essentials & Applications, Wiley-India
+    5. Singh M. D. and K. B. Khanchandani, Power Electronics, Tata McGraw Hill,
+       NewDelhi, 2008.
+    6. Joseph Vithayathil, Power Electronics: Principles and Applications, McGraw-Hill
+       College; International edition ,1995
+    7. Vedam Subramaniam “Electric drives (concepts and applications)”, Tata
+       McGrawHill, 2001.
+    8. G. K. Dubey, Fundamentals of Electric Drives, Narosa publishers, second edition,
+       2010.
+    9. NPTEL Course on Power Electronics: https://nptel.ac.in/courses/108102145
+
+================================================================================
+S6 | 24ERS606 | Seminar
+================================================================================
+24ERS606                    SEMINAR                                        Introduction
+                                                       0 0 4 0 4 2            2024
+Preamble: The course ‘Seminar’ is intended to enable a B.Tech graduate to read,
+understand, present and prepare report about an academic document. The learner shall
+search in the literature including peer reviewed journals, conference, books, project
+reports etc., and identify an appropriate paper/thesis/report in her/his area of interest,
+in consultation with her/his seminar guide. This course can help the learner to
+experience how a presentation can be made about a selected academic document and
+also empower her/him to prepare a technical report.
+Prerequisite: Nil
+Course Outcomes: After the completion of the course the student will be able to
+ CO 1 Identify academic documents from the literature which are related to her/his
+      areas of interest (Apply).
+ CO 2 Read and apprehend an academic document from the literature which is related
+      to her/ his areas of interest (Analyze).
+ CO 3 Prepare a presentation about an academic document (Create).
+ CO 4 Give a presentation about an academic document (Apply)
+ CO 5 Prepare a technical report (Create).
+
+--- SYLLABUS & MODULES ---
+
+
+================================================================================
+S6 | 24SPJ607 | Socially Relevant Project
+================================================================================
+24SPJ607       SOCIALLY RELEVANT PROJECT                           Introduction
+                                                      0 0 0 2 1 1*    2024
+Preamble: The course ‘Socially Relevant Project’ is mainly intended to evoke the
+innovation and invention skills in a student to address societal problems and developing
+indigenous technologies. Each student should complete a minimum of 60 hours of
+community service during their lower semesters (I-V).
+Prerequisite: Nil
+Course Outcomes: After the completion of the course the student will be able to
+ CO 1 Identify societal challenges and propose innovative, feasible solutions using
+      electrical and electronics engineering principles. (Apply)
+ CO 2 Develop products, processes or technologies for sustainable and socially
+      relevant applications (Apply).
+ CO 3 Plan and execute tasks utilizing available resources within timelines, following
+      ethical and professional norms (Apply)
+ CO 4 Engage with communities for feedback and assess the social, environmental,
+      and economic impacts of projects. (Analyze)
+ CO 5 Organize and communicate technical and scientific findings effectively in written
+      and oral forms (Apply).
+
+--- SYLLABUS & MODULES ---
+
+
+================================================================================
+S6 | 24ESP608 | Cyber Physical Systems
+================================================================================
+24ESP608        CYBER PHYSICAL SYSTEMS                                     Introduction
+                                                   1 0 2 0 3          2       2024
+Preamble: This course delves into the seamless integration of computational algorithms
+and physical processes. The course examines how these systems interact,
+communicate, and shape the modern technological landscape.
+Prerequisite: Knowledge in microprocessor/ microcontroller, modelling and control
+Course Outcomes: After the completion of the course the student will be able to
+ CO1 Address challenges in implementing a cyber-physical system from
+       a computational perspective [Understand]
+ CO2 Design of Cyber Physical Systems using formal methods, safety assurance and
+       security aspects [Apply]
+ CO 3 Analyze and Implement CPS systems [Analyze]
+ CO 4 Implementation of privacy and security [Apply]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+MODULE I: Introduction to Cyber-Physical Systems
+
+ Cyber-Physical Systems (CPS) in the real world, Basic principles of design and
+  validation of CPS, Industry 4.0, IIOT implications, Building Automation,
+  Architecture of a generic Medical cyber physical system- Integrated clinical
+  environment, medical device coordination framework, smart clinical decision
+  support system.
+
+ MODULE II:CPS – Environment
+
+ Hardware   platforms  for    Cyber     Physical   Systems:    Sensors/Actuators,
+ Microprocessor/Microcontrollers, Wireless Technologies for Cyber Physical Systems
+
+ Module III: CPS modeling and Control
+
+ Introduction to Modeling of cyber-physical systems- Continuous-time model,
+  discrete time models, finite state machines, Hybrid Automata- with real time
+  examples, Time series models- Auto Regressive model, ARMA. Dynamical system
+  modeling, stability, controller design.
+
+ Delay-aware Design; Platform effect on Stability/Performance.
+
+ MODULE IV: CPS Engineering
+
+ Concurrent Models of computation, Low level Control, Mid High-Level Control and
+  Automation, From features to software components, Mapping software components
+  to ECUs, CPS Performance Analysis - effect of scheduling, bus latency, Sensor and
+  actuation faults on control performance, network congestion
+
+ MODULE V: CPS Security
+
+ Information and Cyber Security basics, Privacy in CPS, Threats to CPS in various
+  domains such as Automotive, Medical, Industrial control etc. CPS Attack models
+
+ Local Network Security for CPSs, Internet-Wide Secure Communication, Security
+  and Privacy for Cloud-Interconnected CPSs, Case Study: secured CPS
+
+Text books
+   1. Rajeev Alur, Principles of Cyber-Physical Systems, MIT Press.
+   2. A. Lee, Sanjit Seshia, Introduction to Embedded Systems – A Cyber–Physical
+      Systems Approach, MIT Press.
+   3. Raj Rajkumar, Dionisio de Niz, and Mark Klein, Cyber-Physical Systems
+      (1st. ed.), Addison-Wesley Professional, Pearson Edu. Pub., 2017.
+
+Reference books
+
+  1. P. Tabuada, “Verification and control of hybrid systems: a symbolic approach”,
+     Springer-Verlag
+  2. Guido Dartmann, Houbing song, Anke schmeink, “Big data analytics for Cyber
+     Physical System”, Elsevier, 2019
+  3. Houbing song, Danda B Rawat, Sabina Jeschke, Christian Brecher, “Cyber
+     Physical Systems Foundations, Principles and Applications”, Elsevier, 2017
+  4. Chong Li, Meikang Qiu, “Reinforcement Learning for Cyber Physical Systems
+     with Cyber Securities Case Studies”, CRC press, 2019
+  5. Houbing Song, Glenn A.Fink, Sabina Jesche, “Security and Privacy in Cyber-
+     Physical Systems: Foundations, Principles and Solutions”, IEEE Press.
+
+================================================================================
+S7 | 24ERP701 | Computer Vision
+================================================================================
+24ERP701           COMPUTER VISION                                Introduction
+                                              2 1     2 0   4 4      2024
+
+Preamble: This course is crafted to provide in-depth knowledge of models of
+image formation, laying a strong foundation in the fundamentals. Through
+immersive modules, students will gain expertise in image feature detection, and
+the fundamental algorithms crucial for pattern recognition. Additionally, the
+course will cover CNN techniques, along with comprehensive exposure to various
+structural pattern recognition methods.
+Prerequisite: NIL
+Course Outcomes: After the completion of the course the student will be able to
+ CO 1    Understand Image Sensing and Processing Fundamentals and
+         manipulate images effectively using various mathematical tools.
+         [Understand]
+ CO 2    Apply filters to images in spatial domain. [Apply]
+
+CO 3      Apply filters to images in frequency domain. [Apply]
+
+CO 4      Understand different image segmentation techniques. [Understand]
+
+CO 5      Apply various algorithms for pattern recognition. [Apply]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: Basics of Digital Image Processing
+ Image sensing and acquisition – simple image formation model
+ Types of images-Basic concepts in Sampling and Quantization, Spatial and
+ intensity Resolution, Image interpolation
+ Basic relationship between pixels of an image-Adjacency, regions and boundaries,
+ Distance measures. Mathematical tools used in digital image processing: Linear
+ versus nonlinear operations, Arithmetic operations, set and logical operations,
+ Spatial operations
+ MODULE II: Image Transforms
+ Spatial Domain transforms: Basic intensity transformation functions: image
+ negatives and log transformation, Histogram processing- histogram
+ equalisation. Fundamentals of Spatial Filtering: Spatial correlation and
+ convolution, Smoothing filters and Sharpening filters: Average and Laplacian
+ filters
+ MODULE III: Frequency Domain transforms
+ Filtering in the frequency Domain: The Discrete Fourier Transform-properties
+ Image smoothing using frequency Domain filters: ideal lowpass filters,
+ Butterworth lowpass filters and Gaussian lowpass filters. Image sharpening
+ using frequency Domain filters: ideal highpass filters, Color Models: RGB model-
+ CMY and CMYK models- HIS          Color System- Y Cb Cr color model-
+
+ MODULE IV: Image segmentation
+ Image segmentation – Classification of Image segmentation techniques, region
+ approach, clustering techniques. Image segmentation based on Thresholding.
+ Classification of edges, edge detection. Hough transforms.
+ Object recognition: Introduction, Approaches to Object recognition.
+ Case study: Finger print recognition and Face recognition
+ MODULE V: Pattern Recognition and Stereovision
+ Recent Advances in Pattern Recognition-Neural network structures for pattern
+ recognition. Convolutional Neural Networks (CNN), Different layers and
+ functionalities, data augmentation, Cost function,Training, parameters and
+ hyper-parameters, Regularization (Case study)
+  Stereovision: Image formation in stereo vision setup (Epipolar geometry)- Image
+  reconstruction from a series of projections- Radon Transform
+Text books
+   1. Gonzalez Rafel C., “Digital Image Processing”, Pearson Education, 2009.
+   2. S Jayaraman, S. Esakkirajan, T. Veerakumar, “Digital image processing”,
+      Tata McGraw Hill, 2015.
+   3. Ian Goodfellow, Yoshua Bengio, Aaron Courville, "Deep Learning (Adaptive
+      Computation and Machine Learning Series)", MIT Press, 2016.
+Reference books
+   1. Forsyth & Ponce, “Computer Vision-A Modern Approach”, Pearson
+      Education
+   2. C. M. Bishop, Pattern Recognition and Machine Learning, Springer, 2006.
+   3. R. O. Duda, P. E. Hart and D. G. Stork, Pattern Classification, John
+      Wiley, 2001.
+   4. Richard Hartley and Andrew Zisserman, Multiple View Geometry in
+      Computer Vision, Second Edition, Cambridge University Press, 2004.
+5. 4. S. Theodoridis and K. Koutroumbas, Pattern Recognition, 4th Ed.,
+   Academic Press, 2009.
+
+================================================================================
+S7 | 24ERP702 | Energy Systems
+================================================================================
+
+
+--- SYLLABUS & MODULES ---
+
+
+================================================================================
+S7 | 24ERD705 | Major Project Phase-I / Internship
+================================================================================
+5 U 24ERD705 PR                            0    0 14 0 14 14        7    100
+                    Option 2: Internship
+                    (4-6 Months)
+                 PR
+      24EEM709/
+    M            M Project in
+      24EEM710/                                                      4/4
+ 6 /H           /HR Minor/Honours/          0    0   0   4               100
+      24ERH709/                                                       /0
+   /R             / Remedial
+      24ERH710
+                 RL
+TOTAL                                                        28 30   21
+
+
+Professional Elective III (S7-PEC III)
+   1. E Mobility-24ERE713
+   2. Modern optimization Techniques-24ERE723
+   3. Design and analysis of Algorithms-24ERE733
+   4. Machine Learning for smart grids-24ERE743
+   5. Edge computing-24ERE753
+   6. Power electronics for renewable energy system-24ERE763
+                              MINORS
+                 Project in
+S7   24EEM709                      24EEM710   Project in Minor
+                 Minor
+
+                              HONOURS
+
+     24EEH709/   Micro Grid and
+S7                                 24ERH710     Cyber Forensics
+     24ERH709    Nano Grid
+                                              L T P J       S C   Year of
+24ERP701           COMPUTER VISION                                Introduction
+                                              2 1     2 0   4 4      2024
+
+Preamble: This course is crafted to provide in-depth knowledge of models of
+image formation, laying a strong foundation in the fundamentals. Through
+immersive modules, students will gain expertise in image feature detection, and
+the fundamental algorithms crucial for pattern recognition. Additionally, the
+course will cover CNN techniques, along with comprehensive exposure to various
+structural pattern recognition methods.
+Prerequisite: NIL
+Course Outcomes: After the completion of the course the student will be able to
+ CO 1    Understand Image Sensing and Processing Fundamentals and
+         manipulate images effectively using various mathematical tools.
+         [Understand]
+ CO 2    Apply filters to images in spatial domain. [Apply]
+
+CO 3      Apply filters to images in frequency domain. [Apply]
+
+CO 4      Understand different image segmentation techniques. [Understand]
+
+CO 5      Apply various algorithms for pattern recognition. [Apply]
+
+--- SYLLABUS & MODULES ---
+SYLLABUS
+ MODULE I: Basics of Digital Image Processing
+ Image sensing and acquisition – simple image formation model
+ Types of images-Basic concepts in Sampling and Quantization, Spatial and
+ intensity Resolution, Image interpolation
+ Basic relationship between pixels of an image-Adjacency, regions and boundaries,
+ Distance measures. Mathematical tools used in digital image processing: Linear
+ versus nonlinear operations, Arithmetic operations, set and logical operations,
+ Spatial operations
+ MODULE II: Image Transforms
+ Spatial Domain transforms: Basic intensity transformation functions: image
+ negatives and log transformation, Histogram processing- histogram
+ equalisation. Fundamentals of Spatial Filtering: Spatial correlation and
+ convolution, Smoothing filters and Sharpening filters: Average and Laplacian
+ filters
+ MODULE III: Frequency Domain transforms
+ Filtering in the frequency Domain: The Discrete Fourier Transform-properties
+ Image smoothing using frequency Domain filters: ideal lowpass filters,
+ Butterworth lowpass filters and Gaussian lowpass filters. Image sharpening
+ using frequency Domain filters: ideal highpass filters, Color Models: RGB model-
+ CMY and CMYK models- HIS          Color System- Y Cb Cr color model-
+
+ MODULE IV: Image segmentation
+ Image segmentation – Classification of Image segmentation techniques, region
+ approach, clustering techniques. Image segmentation based on Thresholding.
+ Classification of edges, edge detection. Hough transforms.
+ Object recognition: Introduction, Approaches to Object recognition.
+ Case study: Finger print recognition and Face recognition
+ MODULE V: Pattern Recognition and Stereovision
+ Recent Advances in Pattern Recognition-Neural network structures for pattern
+ recognition. Convolutional Neural Networks (CNN), Different layers and
+ functionalities, data augmentation, Cost function,Training, parameters and
+ hyper-parameters, Regularization (Case study)
+  Stereovision: Image formation in stereo vision setup (Epipolar geometry)- Image
+  reconstruction from a series of projections- Radon Transform
+Text books
+   1. Gonzalez Rafel C., “Digital Image Processing”, Pearson Education, 2009.
+   2. S Jayaraman, S. Esakkirajan, T. Veerakumar, “Digital image processing”,
+      Tata McGraw Hill, 2015.
+   3. Ian Goodfellow, Yoshua Bengio, Aaron Courville, "Deep Learning (Adaptive
+      Computation and Machine Learning Series)", MIT Press, 2016.
+Reference books
+   1. Forsyth & Ponce, “Computer Vision-A Modern Approach”, Pearson
+      Education
+   2. C. M. Bishop, Pattern Recognition and Machine Learning, Springer, 2006.
+   3. R. O. Duda, P. E. Hart and D. G. Stork, Pattern Classification, John
+      Wiley, 2001.
+   4. Richard Hartley and Andrew Zisserman, Multiple View Geometry in
+      Computer Vision, Second Edition, Cambridge University Press, 2004.
+5. 4. S. Theodoridis and K. Koutroumbas, Pattern Recognition, 4th Ed.,
+   Academic Press, 2009.
+
+================================================================================
+S8 | 24ERD804 | Major Project / Internship
+================================================================================
+24ERD804                    PROJECT                                        Introduction
+                                                       0 0 14 0 14 7          2024
+Preamble: The course ‘Project Work’ is mainly intended to evoke the innovation and
+invention skills in a student. This provides an opportunity to synthesize and apply the
+knowledge and analytical skills learned, to be developed as a prototype or simulation.
+The project initiated in the seventh semester will carry over to eighth semester. The
+learners should focus on key areas of their engineering discipline or explore
+interdisciplinary projects.
+Prerequisite:
+Course Outcomes: After the completion of the course the student will be able to
+ CO 1 Model and solve real world problems by applying knowledge across domains
+      (Apply).
+ CO 2 Develop products, processes or technologies for sustainable and socially
+      relevant applications (Apply).
+ CO 3 Plan and execute tasks utilizing available resources within timelines, following
+      ethical and professional norms (Apply)
+ CO 4 Identify technology/research gaps and propose innovative/creative solutions
+      (Analyze).
+ CO 5 Organize and communicate technical and scientific findings effectively in written
+      and oral forms (Apply).
+
+--- SYLLABUS & MODULES ---
