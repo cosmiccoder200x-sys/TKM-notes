@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import ModuleView from "@/components/ModuleView";
+import DeepDivePrompt from "@/components/DeepDivePrompt";
 import { subjects, findSubject } from "@/lib/content";
 import registry from "@/lib/notes";
 
@@ -30,9 +31,9 @@ export default function SubjectPage({ params }: { params: { semester: string; su
         </div>
 
         {!content && (
-          <div className="card p-5 text-center">
+          <div className="card p-5 text-center mb-4">
             <p className="text-sm text-ink-hi mb-1">Notes for this subject haven't been written yet.</p>
-            <p className="text-xs text-ink-lo">Ask for it by name and it'll be added module by module.</p>
+            <p className="text-xs text-ink-lo">Use the AI study prompt below to generate your own in the meantime.</p>
           </div>
         )}
 
@@ -50,13 +51,15 @@ export default function SubjectPage({ params }: { params: { semester: string; su
               ))}
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 mb-4">
               {content.modules.map((m) => (
                 <ModuleView key={m.id} module={m} />
               ))}
             </div>
           </>
         )}
+
+        <DeepDivePrompt subject={subject} />
       </main>
     </>
   );

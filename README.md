@@ -103,8 +103,31 @@ CREATE TABLE module_sections (
 );
 ```
 
+## AI deep-dive prompt (new)
+
+Every subject page now has a collapsible "Want to go deeper on this subject?" card at the bottom. It generates a copy-ready prompt (`lib/deepDivePrompt.ts`) that:
+
+- Embeds the **exact official module-wise syllabus** for that subject (`lib/syllabusText.ts`, extracted from the same KTU PDF as `docs/syllabus-reference.txt`)
+- Asks whatever AI you paste it into to produce the same 7-section format this app uses (overview, concepts, definitions, worked examples, formula sheet, ranked exam-focus questions, revision notes) — module by module, in order
+- Falls back gracefully for electives (lists the official options, asks the AI to confirm which one) and for courses with no fixed module syllabus (Seminar, Major Project) — it's honest about not having exact data rather than guessing
+
+This means **every subject is useful immediately**, even ones with no written notes yet — copy the prompt, paste it into Claude (or anything), get a full deep-dive on the spot. 29 of 38 subjects have the exact syllabus embedded; the rest (open electives, project/seminar courses) use an honest generic fallback.
+
+## Understanding features (new)
+
+Every module across all 7 S3 subjects now also has, where it genuinely applies:
+
+- **Intuition** — one "think of it like..." analogy for the module's hardest idea, shown at the top of the Overview tab
+- **Worked Examples** — step-revealed numerical/derivation walkthroughs (`components/WorkedExampleCard.tsx`): see the problem, tap to reveal one step at a time, then the answer — forces you to predict the next step instead of just reading a finished solution
+- **Comparison Cards** — side-by-side "why this and not that" cards for near-twin concepts (Mealy vs Moore, chaining vs probing, Thevenin vs Norton, CCD vs CMOS, etc.)
+- **Self-Check Questions** — tap-to-reveal questions at the end of each module, for noticing gaps before the exam does
+- **Cross-Links** — a handful of genuine "this idea also appears in..." links between S3 subjects (e.g. Hall-effect sensors in both the VI Lab and Sensor Circuits courses). More will populate naturally as S4–S8 get written.
+- **Interactive Diagrams** — two diagrams (RL step response, RLC resonance curve, in `components/InteractiveDiagrams.tsx`) now have live sliders for R/L/C that redraw the actual curve in real time, instead of a static picture
+
+These are all optional fields on `Module` (see `lib/types.ts`) — a module renders fine with just the original 7 sections if these aren't filled in, so they can be added incrementally to new subjects too.
+
 ## Current content status
 
-- ✅ **Data Structures and Algorithms (24ERP304)** — all 5 modules, fully written
-- ⬜ Everything else in S3 — next in line
-- ⬜ S4–S8 — after S3 is done
+- ✅ **All 7 S3 subjects — fully written**, including understanding features (Advanced Linear Algebra/Complex Analysis/PDE, Network Theory, Digital Electronics & Logic Design, Data Structures and Algorithms, Sensor & Sensor Circuits, Life Skills and Professional Ethics, System Simulation & VI Lab)
+- ✅ **AI deep-dive prompt** — live on every subject page, syllabus-accurate for 29/38 subjects
+- ⬜ S4–S8 written notes — next

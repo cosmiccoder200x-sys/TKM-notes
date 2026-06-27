@@ -34,6 +34,9 @@ export interface DiagramSpec {
   // svgKey maps to a named diagram renderer so no image hosting is required.
   svgKey: string;
   caption: string;
+  // If true, svgKey is looked up in the interactive diagram registry instead —
+  // these let you drag a slider and watch the diagram actually reshape live.
+  interactive?: boolean;
 }
 
 export interface ExamFocusItem {
@@ -55,6 +58,43 @@ export interface Module {
   formulas: FormulaItem[];
   examFocus: ExamFocusItem[];
   revisionNotes: string[];          // ultra-short one-page bullets
+
+  // --- understanding-focused additions (all optional, added incrementally) ---
+  intuition?: string;               // one "think of it like..." analogy for the module's hardest idea
+  workedExamples?: WorkedExample[]; // step-revealed numerical/derivation walkthroughs
+  comparisons?: ComparisonCard[];   // "why this and not that" side-by-side cards
+  selfCheck?: SelfCheckItem[];      // tap-to-reveal check-your-understanding questions
+  crossLinks?: CrossLink[];         // where this same idea shows up in another subject
+}
+
+export interface WorkedExampleStep {
+  label: string;     // short title for this step, e.g. "Step 1: Identify the loop bounds"
+  content: string;   // the actual work/explanation for this step
+}
+
+export interface WorkedExample {
+  title: string;
+  problem: string;
+  steps: WorkedExampleStep[];
+  answer: string;     // final answer, revealed after all steps
+}
+
+export interface ComparisonCard {
+  title: string;             // e.g. "Mealy vs Moore"
+  scenario: string;          // shared context both approaches address
+  a: { label: string; body: string };
+  b: { label: string; body: string };
+  takeaway: string;          // the one-line difference to remember
+}
+
+export interface SelfCheckItem {
+  question: string;
+  answer: string;
+}
+
+export interface CrossLink {
+  label: string;   // "Hall effect sensors — also covered in the VI Lab course"
+  href: string;    // "/s3/system-simulation-and-virtual-instrumentation-lab#m4"
 }
 
 export interface SubjectContent {

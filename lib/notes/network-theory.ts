@@ -61,6 +61,32 @@ const content: SubjectContent = {
         "IN = Vth/Rth — Thevenin and Norton are always interconvertible.",
         "Max power transfer: RL = Rth, and Pmax = Vth²/(4Rth).",
       ],
+      intuition:
+        "Thevenin's theorem says: no matter how messy the network behind two terminals is, from the outside it behaves exactly like one battery and one resistor. You're not simplifying the circuit — you're proving the rest of the world can't tell the difference.",
+      workedExamples: [
+        {
+          title: "Find the Thevenin equivalent of a simple source network",
+          problem: "A 12V source in series with a 4Ω resistor feeds two terminals A-B, with a 6Ω resistor also connected in parallel across A-B (load removed). Find Vth and Rth.",
+          steps: [
+            { label: "Step 1: Find Vth (open-circuit voltage)", content: "With the terminals open, no current flows through the 6Ω (it's just sitting in parallel with the open terminals, in series with nothing else) — actually here the 6Ω is the only path, so current flows through 4Ω and 6Ω in series: I = 12/(4+6) = 1.2A. Vth = voltage across the 6Ω = 1.2 × 6 = 7.2V." },
+            { label: "Step 2: Find Rth (deactivate the source)", content: "Replace the 12V source with a short. Now 4Ω and 6Ω are in series as seen from A-B: Rth = 4 + 6 = 10Ω." },
+          ],
+          answer: "Vth = 7.2V, Rth = 10Ω",
+        },
+      ],
+      comparisons: [
+        {
+          title: "Thevenin's Theorem vs Norton's Theorem",
+          scenario: "Both replace a complicated two-terminal network with one simple equivalent — the question is just which form is more convenient for what you're solving next.",
+          a: { label: "Thevenin", body: "One voltage source Vth in series with Rth. Natural when you're about to add a load in series, or want open-circuit behaviour directly." },
+          b: { label: "Norton", body: "One current source IN in parallel with RN (=Rth). Natural when you're about to add a load in parallel, or want short-circuit behaviour directly." },
+          takeaway: "They're mathematically interchangeable (IN=Vth/Rth) — pick whichever form makes the NEXT step of your calculation easier.",
+        },
+      ],
+      selfCheck: [
+        { question: "Why can't you apply the superposition theorem directly to find power?", answer: "Power is proportional to the square of current/voltage (P=I²R), which is a nonlinear function. Superposition only holds for linear quantities, so you must first sum the actual currents/voltages from each source, then compute power from that final sum." },
+        { question: "If Rth = 5Ω for a source network, what load resistance draws maximum power, and what determines Rth in the first place?", answer: "RL = Rth = 5Ω draws maximum power. Rth is found by deactivating all independent sources (short voltage sources, open current sources) and computing the resistance seen looking into the two terminals." },
+      ],
     },
 
     // ---------------------------------------------------------------
@@ -93,7 +119,7 @@ const content: SubjectContent = {
       ],
       diagrams: [
         { title: "R, L, C transform impedances in the s-domain", svgKey: "rl-rc-transform-impedance", caption: "Each element's s-domain model includes an extra source representing its initial condition — this is what lets Laplace methods handle non-zero initial current/voltage." },
-        { title: "RL circuit step response", svgKey: "rl-circuit-step-response", caption: "Current rises from 0 toward V/R; one time constant τ = L/R marks where it reaches 63.2% of the final value." },
+        { title: "RL circuit step response (drag R, L)", svgKey: "interactive-rl-step", interactive: true, caption: "Current rises from 0 toward V/R; one time constant τ = L/R marks where it reaches 63.2% of the final value. Drag the sliders and watch τ actually stretch or compress." },
       ],
       formulas: [
         { name: "s-domain transform of R, L, C", expression: "R → R   |   L → sL (+ Li(0))   |   C → 1/sC (+ v(0)/s)" },
@@ -114,6 +140,33 @@ const content: SubjectContent = {
         "RC (DC): v(t)=V(1−e^{−t/τ}), τ=RC.",
         "τ = time to reach 63.2% of final value; circuit ~settled after 5τ.",
         "Complete response = transient (dies out) + steady-state (persists).",
+      ],
+      intuition:
+        "An inductor is a 'current snob' — it resists any change to its current, so right after a switch closes it briefly insists on keeping whatever current it had before (often zero). A capacitor is the opposite: a 'voltage snob' that insists on keeping its voltage. That single idea is the entire reason transient analysis exists.",
+      workedExamples: [
+        {
+          title: "Find the time constant and final current of an RL circuit",
+          problem: "A 20V DC source is switched onto a series circuit with R=5Ω and L=2H, starting from zero current. Find τ and the current at t=τ.",
+          steps: [
+            { label: "Step 1: Compute τ", content: "τ = L/R = 2/5 = 0.4 s." },
+            { label: "Step 2: Compute the final (steady-state) current", content: "As t→∞, i(t) → V/R = 20/5 = 4A." },
+            { label: "Step 3: Compute i(τ)", content: "i(τ) = (V/R)(1 − e⁻¹) = 4 × (1 − 0.368) = 4 × 0.632 = 2.528A — exactly 63.2% of the final value, as expected at t=τ." },
+          ],
+          answer: "τ = 0.4 s, final current = 4A, current at t=τ ≈ 2.53A",
+        },
+      ],
+      comparisons: [
+        {
+          title: "Transient Response vs Steady-State Response",
+          scenario: "Every complete response to a switching event is built from these two pieces — the question is which one you're being asked about.",
+          a: { label: "Transient", body: "The temporary part that decays toward zero (the e⁻ᵗ/τ term). Dominates right after switching, vanishes after ~5τ." },
+          b: { label: "Steady-State", body: "The permanent part that matches the source's own behaviour (constant for DC, sinusoidal for AC). What's left once the transient has died out." },
+          takeaway: "Complete response = transient + steady-state, always. If a question only wants the 'final value', it's asking for steady-state alone.",
+        },
+      ],
+      selfCheck: [
+        { question: "Right at the instant a switch closes on an RL circuit with zero initial current, what is the current, and why?", answer: "Zero. An inductor opposes any sudden change in current, so the current must continue smoothly from its pre-switch value (0) — it cannot jump instantaneously." },
+        { question: "Why does C transform to 1/sC PLUS a v(0)/s source, instead of just 1/sC?", answer: "1/sC alone only describes a capacitor starting at zero voltage. The extra v(0)/s source accounts for whatever charge (and therefore voltage) was already stored on the capacitor before t=0 — without it, the s-domain model would silently assume the capacitor started uncharged." },
       ],
     },
 
@@ -144,7 +197,7 @@ const content: SubjectContent = {
         { term: "Half-Power Frequency", definition: "Either of the two frequencies (f1 below and f2 above resonance) at which the power delivered by the circuit falls to exactly half its maximum (resonant) value." },
       ],
       diagrams: [
-        { title: "Series RLC resonance curve", svgKey: "resonance-curve", caption: "Current peaks sharply at f0; the bandwidth is the width between the two half-power points where current = Imax/√2." },
+        { title: "Series RLC resonance curve (drag R, L, C)", svgKey: "interactive-resonance", interactive: true, caption: "Current peaks sharply at f0; the bandwidth is the width between the two half-power points where current = Imax/√2. Drag R down and watch Q rise and the peak sharpen in real time." },
       ],
       formulas: [
         { name: "Resonant frequency", expression: "f₀ = 1 / (2π√(LC))" },
@@ -164,6 +217,33 @@ const content: SubjectContent = {
         "Q = ω₀L/R = (1/R)√(L/C) — higher Q = sharper, more selective.",
         "BW = f₀/Q — higher Q means narrower bandwidth.",
         "Mesh/node analysis in s-domain = same KVL/KCL technique, just with Z(s) instead of R.",
+      ],
+      intuition:
+        "Think of a swing being pushed: push at exactly its natural rhythm (resonance) and a tiny push builds huge amplitude. Q is just how little friction (resistance) there is in the swing's pivot — less friction means a much bigger response at exactly the right frequency, and almost nothing anywhere else.",
+      workedExamples: [
+        {
+          title: "Find f₀, Q and bandwidth for a series RLC circuit",
+          problem: "A series RLC circuit has R=10Ω, L=0.1H, C=10µF. Find the resonant frequency, quality factor, and bandwidth.",
+          steps: [
+            { label: "Step 1: Resonant frequency", content: "f₀ = 1/(2π√(LC)) = 1/(2π√(0.1 × 10×10⁻⁶)) = 1/(2π√(10⁻⁶)) = 1/(2π × 10⁻³) ≈ 159.2 Hz." },
+            { label: "Step 2: Quality factor", content: "Q = (1/R)√(L/C) = (1/10)√(0.1/10×10⁻⁶) = (1/10)√(10000) = (1/10)(100) = 10." },
+            { label: "Step 3: Bandwidth", content: "BW = f₀/Q = 159.2/10 ≈ 15.92 Hz." },
+          ],
+          answer: "f₀ ≈ 159.2 Hz, Q = 10, BW ≈ 15.92 Hz",
+        },
+      ],
+      comparisons: [
+        {
+          title: "High-Q vs Low-Q Resonant Circuit",
+          scenario: "Same f₀, but R is different — what actually changes in behaviour?",
+          a: { label: "High Q (low R)", body: "Sharp, tall, narrow peak. Very selective — picks out a tight band of frequencies near f₀. Used in radio tuning where you want one station, not its neighbours." },
+          b: { label: "Low Q (high R)", body: "Broad, shallow peak. Passes a wide range of frequencies around f₀ with little discrimination." },
+          takeaway: "Q is entirely a resistance story for a fixed L and C — less resistance, sharper and more selective resonance.",
+        },
+      ],
+      selfCheck: [
+        { question: "At resonance, what is the circuit's power factor, and why?", answer: "Power factor is 1 (unity). At resonance XL=XC, so the net reactance is zero and the impedance is purely resistive — voltage and current are perfectly in phase." },
+        { question: "If you double R while keeping L and C fixed, what happens to Q and bandwidth?", answer: "Q is inversely proportional to R, so Q halves. Bandwidth = f₀/Q, and since f₀ is unchanged but Q halved, bandwidth doubles — the resonance peak becomes shorter and wider." },
       ],
     },
 
@@ -215,6 +295,21 @@ const content: SubjectContent = {
         "4-wire Y: each phase independent (neutral fixes reference). Neutral carries imbalance.",
         "3-wire Y: no neutral wire → neutral shift exists → find V_N'N (Millman's) FIRST.",
         "Unbalanced Delta: each branch sees full line voltage directly, independent of others.",
+      ],
+      intuition:
+        "A neutral wire is like a referee fixing the rules for each phase independently — with it, each phase plays its own game regardless of what the others do. Pull the referee out (3-wire) and the three unbalanced phases start fighting over where 'zero' even is — that fight is exactly what neutral shift measures.",
+      comparisons: [
+        {
+          title: "4-Wire vs 3-Wire Unbalanced Star Load",
+          scenario: "Same unbalanced star load, but the presence of a neutral wire completely changes how you must solve it.",
+          a: { label: "4-Wire (neutral present)", body: "Each phase voltage is fixed by the neutral. Solve each phase current independently: I = V_phase/Z_phase. Simple, no extra step." },
+          b: { label: "3-Wire (no neutral)", body: "The load's star point floats away from the source neutral. Must find the neutral shift voltage (Millman's theorem) FIRST, before phase currents mean anything." },
+          takeaway: "The presence of a neutral wire is the single fact that decides whether you need Millman's theorem at all.",
+        },
+      ],
+      selfCheck: [
+        { question: "In a balanced three-phase system, why can you get away with analysing just one phase?", answer: "By symmetry, all three phases carry identical magnitude currents/voltages, 120° apart — so one phase's behaviour fully describes the other two; there's nothing new to calculate." },
+        { question: "What physically happens if you remove the neutral wire from an UNBALANCED 4-wire star load?", answer: "Without the neutral fixing the reference point, the load's star point is no longer pinned to the source neutral's potential — it shifts to a new voltage (neutral shift), and you can no longer treat each phase as independent; Millman's theorem is needed to find that shifted point first." },
       ],
     },
 
@@ -270,6 +365,23 @@ const content: SubjectContent = {
         "ABCD/T: best for cascaded networks — matrices just multiply.",
         "Reciprocity (passive, no dependent sources): Z12=Z21 | Y12=Y21 | h12=−h21 | AD−BC=1.",
         "Symmetry (ports interchangeable): Z11=Z22 | Y11=Y22 | A=D.",
+      ],
+      intuition:
+        "Each parameter set is just a different question asked at the same two doors: Z asks 'what voltage shows up if I push a known current in?' (open the other door), Y asks 'what current shows up if I push a known voltage in?' (short the other door). Same box, different probing question, different convenient algebra.",
+      workedExamples: [
+        {
+          title: "Find the Z-parameters of a simple T-network",
+          problem: "A network has a 2Ω resistor from port-1 to a middle node, a 3Ω resistor from the middle node to port-2, and a 5Ω resistor from the middle node to the common ground (a T-network). Find Z11, Z12, Z21, Z22.",
+          steps: [
+            { label: "Step 1: Find Z11 and Z21 (port 2 open, I2=0)", content: "Drive I1 into port 1 with port 2 open (I2=0). All of I1 flows through 2Ω then through 5Ω to ground. V1 = I1(2+5) = 7I1 → Z11 = 7Ω. V2 = voltage at the middle node (since no current flows through the 3Ω) = I1×5 → Z21 = 5Ω." },
+            { label: "Step 2: Find Z12 and Z22 (port 1 open, I1=0)", content: "Drive I2 into port 2 with port 1 open. By the same logic: V2 = I2(3+5) = 8I2 → Z22 = 8Ω. V1 = I2×5 → Z12 = 5Ω." },
+          ],
+          answer: "Z11=7Ω, Z12=5Ω, Z21=5Ω, Z22=8Ω — note Z12=Z21, confirming the network is reciprocal (as expected for a passive resistor network).",
+        },
+      ],
+      selfCheck: [
+        { question: "Why are ABCD (T) parameters specifically preferred for networks connected in cascade?", answer: "When two-port networks are cascaded (output of one feeds input of the next), the overall ABCD matrix of the combination is simply the matrix product of the individual ABCD matrices — no other parameter set combines this simply under cascading." },
+        { question: "If Z12 ≠ Z21 for a given two-port network, what does that immediately tell you?", answer: "The network is NOT reciprocal — it must contain a dependent source (active element), since a purely passive linear network is always reciprocal (Z12=Z21)." },
       ],
     },
   ],

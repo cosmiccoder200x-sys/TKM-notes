@@ -53,6 +53,12 @@ const content: SubjectContent = {
         "Sensitivity analysis → which component matters most to the output.",
         "Noise analysis → how component noise reaches the output.",
       ],
+      intuition:
+        "DC, transient, and AC simulation aren't three different tools for three different circuits — they're three different QUESTIONS about the SAME circuit: 'where does it settle?' (DC), 'how does it get there?' (transient), and 'how does it respond if I wiggle it at different speeds?' (AC).",
+      selfCheck: [
+        { question: "If you only care about a circuit's behaviour after all switching transients have died out, which simulation type do you need?", answer: "DC simulation (for a constant-source steady state) or AC simulation (for a sinusoidal steady state) — transient simulation is specifically for capturing what happens DURING the settling process, not after it." },
+        { question: "Why would a designer run a sensitivity analysis before committing to final component tolerances?", answer: "Sensitivity analysis reveals which components' value variations affect the output the most. Knowing this lets a designer spend money on tight tolerances only where it actually matters, and allow cheaper, looser tolerances on components the output barely depends on." },
+      ],
     },
 
     // ---------------------------------------------------------------
@@ -104,6 +110,24 @@ const content: SubjectContent = {
         "plot(x,y) + xlabel/ylabel/title/grid — always label your plots.",
         "ode45(@(t,y) f(t,y), tspan, y0) is the go-to general ODE solver.",
       ],
+      intuition:
+        "MATLAB treats EVERYTHING as a matrix, even a single number — that's not a quirk, it's the whole design philosophy. Once you stop thinking 'this is a number, that's an array' and just think 'these are all matrices of different shapes', operations like elementwise multiplication and vectorized loops stop being special cases and start feeling automatic.",
+      workedExamples: [
+        {
+          title: "Write a MATLAB script to plot a function",
+          problem: "Write MATLAB code to plot y = sin(x) for x from 0 to 2π, with proper labels.",
+          steps: [
+            { label: "Step 1: Create the x values", content: "x = 0:0.01:2*pi;   % fine step for a smooth curve" },
+            { label: "Step 2: Compute y", content: "y = sin(x);   % MATLAB applies sin() to every element automatically" },
+            { label: "Step 3: Plot and label", content: "plot(x, y); xlabel('x'); ylabel('sin(x)'); title('Sine Wave'); grid on;" },
+          ],
+          answer: "A labeled sine curve from 0 to 2π — note step 2 needed no loop at all, since MATLAB operations apply elementwise to the whole vector by default.",
+        },
+      ],
+      selfCheck: [
+        { question: "Why does y = sin(x) work directly on a whole vector x in MATLAB, without writing a for loop?", answer: "MATLAB functions are designed to operate elementwise on matrices/vectors by default — sin() is applied to every element of x simultaneously, producing a same-sized vector y. This 'vectorization' is one of MATLAB's core design principles." },
+        { question: "If your function file is named addTwo.m but the function inside is defined as function out = sumThem(a,b), what happens when you try to call addTwo(3,4)?", answer: "MATLAB requires the function name to match the file name exactly, so this would produce an error or unexpected behavior — rename either the file to sumThem.m or the function definition to function out = addTwo(a,b)." },
+      ],
     },
 
     // ---------------------------------------------------------------
@@ -148,6 +172,24 @@ const content: SubjectContent = {
         "Sources (Step, Sine, Constant) generate signals; Sinks (Scope, Display) consume them.",
         "Build from the highest derivative backward using Integrator + Gain + Sum blocks.",
         "Subsystem = group of blocks collapsed into one reusable block.",
+      ],
+      intuition:
+        "An Integrator block is just a promise: 'whatever you feed me, I'll accumulate it over time.' Building a differential equation backward from its highest derivative works because integrating dⁿx/dtⁿ once gives you dⁿ⁻¹x/dtⁿ⁻¹ — chain enough Integrators together and you walk all the way down to x(t) itself.",
+      workedExamples: [
+        {
+          title: "Build a SIMULINK model from a differential equation",
+          problem: "You need to model dx/dt = −2x + u(t), where u(t) is a step input. Describe the SIMULINK block arrangement.",
+          steps: [
+            { label: "Step 1: Identify the highest derivative", content: "dx/dt is the highest (and only) derivative here — it will come out of an Integrator's input." },
+            { label: "Step 2: Express dx/dt in terms of available signals", content: "dx/dt = u(t) − 2x. You need a Sum block combining u(t) (from a Step source) and −2x (x fed back through a Gain block of −2)." },
+            { label: "Step 3: Wire it up", content: "Step source → Sum block (+input). Integrator's OUTPUT (x) feeds back through a Gain of −2 → Sum block (second input). Sum block's output feeds the Integrator's input. Integrator's output (x) also feeds a Scope." },
+          ],
+          answer: "Step → Sum(+) ← Gain(−2) ← [Integrator output x] ; Sum output → Integrator → x → Scope (and feeds back to the Gain block)",
+        },
+      ],
+      selfCheck: [
+        { question: "Why can't you build a SIMULINK model for a 2nd-order differential equation with just ONE Integrator block?", answer: "Each Integrator reduces the derivative order by exactly one. A 2nd-order equation has a 2nd derivative as its highest term, so you need TWO Integrators in series to walk down from the 2nd derivative to the 1st derivative, and then to the variable itself." },
+        { question: "What's the practical benefit of collapsing a group of blocks into a Subsystem rather than leaving them all visible?", answer: "It simplifies a large model visually (showing one block instead of dozens) and makes that group reusable — you can drop the same subsystem into multiple models instead of rebuilding the same block arrangement each time." },
       ],
     },
 
@@ -203,6 +245,24 @@ const content: SubjectContent = {
         "Hall sensor → clamp meter: senses magnetic field, no circuit break needed.",
         "DSO: digitizes waveform → read frequency/period directly, phase via Δt/T×360°.",
       ],
+      intuition:
+        "An ADC is like a camera shutter — it needs the scene to stay still for the instant the shutter is open, or the photo blurs. A Sample-and-Hold circuit is that freeze-frame: it grabs the signal's value and holds it rock-steady just long enough for the ADC to 'photograph' it accurately.",
+      comparisons: [
+        {
+          title: "Contact (Shunt) vs Non-Contact (Hall/Clamp) Current Sensing",
+          scenario: "Both measure current flowing through a wire — but one requires breaking the circuit and one doesn't.",
+          a: { label: "Shunt resistor", body: "Inserted IN SERIES with the circuit — current must physically flow through it. Requires breaking the circuit to install. Simple, accurate, but invasive." },
+          b: { label: "Hall-effect clamp meter", body: "Clamps AROUND the conductor, sensing the magnetic field the current produces. No circuit break needed at all — purely non-contact." },
+          takeaway: "Whenever you see 'measure current without disturbing the circuit', that's the Hall-effect/clamp-meter approach, not a shunt.",
+        },
+      ],
+      selfCheck: [
+        { question: "Why would feeding an ADC a signal that's still changing (without a Sample-and-Hold) cause measurement errors?", answer: "An ADC takes a finite amount of time to complete its conversion. If the input voltage keeps changing during that window, the digital code produced doesn't correspond cleanly to any single instant's value — it's a blurred mix of whatever the signal did during the conversion." },
+        { question: "What specifically makes an instrumentation amplifier better suited than a plain op-amp differential amplifier for amplifying a sensor's small signal?", answer: "An instrumentation amplifier has much higher input impedance (so it doesn't load down/distort the sensor's weak signal) and much higher CMRR (so it rejects common-mode noise far more effectively) than a basic op-amp differential stage." },
+      ],
+      crossLinks: [
+        { label: "LVDT and op-amp slew rate/CMRR also covered in Sensor & Sensor Circuits (Module IV)", href: "/s3/sensor-and-sensor-circuits#m4" },
+      ],
     },
 
     // ---------------------------------------------------------------
@@ -252,6 +312,21 @@ const content: SubjectContent = {
         "Graph = plots after acquisition. Chart = plots in real time as data streams in.",
         "DAQ hardware = ADC + bus interface to the PC.",
         "ISA/PCI = internal buses. USB/PCMCIA = external/portable. GPIB (IEEE 488.1) = instrument control bus.",
+      ],
+      intuition:
+        "A traditional oscilloscope is a single-purpose hammer — built to do exactly one job. Virtual instrumentation turns that hammer into a 3D printer: the same general-purpose hardware (DAQ) becomes whatever instrument the software currently tells it to be.",
+      comparisons: [
+        {
+          title: "Array vs Cluster",
+          scenario: "Both bundle multiple pieces of data together — but for very different reasons.",
+          a: { label: "Array", body: "Multiple elements of the SAME type, accessed by index (e.g. 100 temperature readings). Good when you have many of the same kind of thing." },
+          b: { label: "Cluster", body: "Multiple elements of DIFFERENT types bundled as one unit (e.g. a name, an ID number, and a status flag together) — like a struct/record." },
+          takeaway: "If you'd loop over it with an index, it's an array. If you'd describe it as 'this thing has these properties', it's a cluster.",
+        },
+      ],
+      selfCheck: [
+        { question: "If you need to watch a sensor's reading update continuously while a test is running, would you use a graph or a chart?", answer: "A chart — it's designed to plot data continuously in real time as it streams in, appending new points live. A graph only displays a complete data set after acquisition is finished." },
+        { question: "Why is GPIB (IEEE 488.1) categorized differently from USB or PCI in this module?", answer: "USB and PCI/ISA are general-purpose computer connection buses used for all kinds of peripherals. GPIB is specifically an instrumentation control bus, purpose-built for connecting and commanding standalone test instruments (like a function generator or DMM) from a controlling computer." },
       ],
     },
   ],

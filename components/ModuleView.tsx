@@ -4,8 +4,12 @@ import { useState } from "react";
 import { Module } from "@/lib/types";
 import Diagram from "./Diagrams";
 import WeightMeter from "./WeightMeter";
+import WorkedExampleCard from "./WorkedExampleCard";
+import ComparisonCard from "./ComparisonCard";
+import SelfCheck from "./SelfCheck";
+import interactiveRegistry from "./InteractiveDiagrams";
 
-const SECTIONS = [
+const BASE_SECTIONS = [
   { key: "overview", label: "Overview" },
   { key: "concepts", label: "Concepts" },
   { key: "definitions", label: "Definitions" },
@@ -15,10 +19,27 @@ const SECTIONS = [
   { key: "revision", label: "Revision" },
 ] as const;
 
-type SectionKey = typeof SECTIONS[number]["key"];
+type SectionKey =
+  | typeof BASE_SECTIONS[number]["key"]
+  | "practice"
+  | "compare"
+  | "selfcheck";
 
 export default function ModuleView({ module, defaultSection = "overview" }: { module: Module; defaultSection?: SectionKey }) {
   const [active, setActive] = useState<SectionKey>(defaultSection);
+
+  const sections: { key: SectionKey; label: string }[] = [
+    BASE_SECTIONS[0],
+    BASE_SECTIONS[1],
+    BASE_SECTIONS[2],
+    BASE_SECTIONS[3],
+    BASE_SECTIONS[4],
+    ...(module.workedExamples?.length ? [{ key: "practice" as SectionKey, label: "Practice" }] : []),
+    ...(module.comparisons?.length ? [{ key: "compare" as SectionKey, label: "Compare" }] : []),
+    BASE_SECTIONS[5],
+    ...(module.selfCheck?.length ? [{ key: "selfcheck" as SectionKey, label: "Self-Check" }] : []),
+    BASE_SECTIONS[6],
+  ];
 
   return (
     <div id={module.id} className="card overflow-hidden">
@@ -28,7 +49,7 @@ export default function ModuleView({ module, defaultSection = "overview" }: { mo
 
       {/* Section pills — horizontally scrollable on mobile */}
       <div className="flex gap-1.5 px-4 pt-3 pb-2 overflow-x-auto no-scrollbar">
-        {SECTIONS.map((s) => (
+        {sections.map((s) => (
           <button
             key={s.key}
             onClick={() => setActive(s.key)}
@@ -54,6 +75,25 @@ export default function ModuleView({ module, defaultSection = "overview" }: { mo
               <div className="eyebrow mb-1 text-weight">Why it matters in exams</div>
               <p className="text-sm text-ink-hi leading-relaxed">{module.overview.whyItMatters}</p>
             </div>
+            {module.intuition && (
+              <div className="border border-signal-dim bg-signal/5 rounded-card p-3">
+                <div className="eyebrow mb-1">think of it like…</div>
+                <p className="text-sm text-ink-hi leading-relaxed">{module.intuition}</p>
+              </div>
+            )}
+            {module.crossLinks && module.crossLinks.length > 0 && (
+              <div className="flex flex-col gap-1.5 pt-1">
+                {module.crossLinks.map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.href}
+                    className="text-xs font-mono text-ink-lo hover:text-signal border border-bg-border rounded-card px-2.5 py-1.5 inline-block"
+                  >
+                    ↗ {link.label}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
@@ -85,7 +125,11 @@ export default function ModuleView({ module, defaultSection = "overview" }: { mo
               <div key={i}>
                 <div className="text-sm font-semibold text-ink-hi mb-2">{d.title}</div>
                 <div className="bg-bg-raised border border-bg-border rounded-card p-3">
-                  <Diagram svgKey={d.svgKey} />
+                  {d.interactive && interactiveRegistry[d.svgKey] ? (
+                    interactiveRegistry[d.svgKey]()
+                  ) : (
+                    <Diagram svgKey={d.svgKey} />
+                  )}
                 </div>
                 <div className="text-xs text-ink-lo mt-2 leading-relaxed">{d.caption}</div>
               </div>
@@ -107,6 +151,22 @@ export default function ModuleView({ module, defaultSection = "overview" }: { mo
           </div>
         )}
 
+        {active === "practice" && module.workedExamples && (
+          <div className="space-y-3">
+            {module.workedExamples.map((ex, i) => (
+              <WorkedExampleCard key={i} example={ex} />
+            ))}
+          </div>
+        )}
+
+        {active === "compare" && module.comparisons && (
+          <div className="space-y-3">
+            {module.comparisons.map((c, i) => (
+              <ComparisonCard key={i} card={c} />
+            ))}
+          </div>
+        )}
+
         {active === "examfocus" && (
           <div className="space-y-2.5">
             {module.examFocus.map((q, i) => (
@@ -117,6 +177,14 @@ export default function ModuleView({ module, defaultSection = "overview" }: { mo
                 </div>
                 {q.note && <div className="text-xs text-ink-lo leading-relaxed">{q.note}</div>}
               </div>
+            ))}
+          </div>
+        )}
+
+        {active === "selfcheck" && module.selfCheck && (
+          <div className="space-y-2.5">
+            {module.selfCheck.map((item, i) => (
+              <SelfCheck key={i} item={item} index={i} />
             ))}
           </div>
         )}

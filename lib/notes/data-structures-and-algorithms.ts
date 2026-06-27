@@ -64,6 +64,33 @@ const content: SubjectContent = {
         "Order to memorize: O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)",
         "Master theorem form: T(n) = aT(n/b) + f(n) — compare f(n) to n^(log_b a).",
       ],
+      intuition:
+        "Think of Big-O like a speed limit sign, not a speedometer reading — it tells you the worst the algorithm can possibly do as input grows, not its exact runtime on one particular input.",
+      workedExamples: [
+        {
+          title: "Find the time complexity of a nested loop",
+          problem: "What is the time complexity of: for(i=0;i<n;i++) { for(j=0;j<n;j++) { print(i,j); } }",
+          steps: [
+            { label: "Step 1 — outer loop bound", content: "The outer loop runs from i=0 to i<n, so it executes n times." },
+            { label: "Step 2 — inner loop bound", content: "For every single value of i, the inner loop also runs from j=0 to j<n — n times." },
+            { label: "Step 3 — combine (nested → multiply)", content: "Since the inner loop is nested inside the outer loop, total operations = n (outer) × n (inner) = n²." },
+          ],
+          answer: "O(n²)",
+        },
+      ],
+      comparisons: [
+        {
+          title: "Worst Case vs Average Case",
+          scenario: "Both describe an algorithm's behaviour across different inputs of the same size n — but they answer different questions.",
+          a: { label: "Worst Case", body: "The maximum time the algorithm could take over ANY input of size n. This is what Big-O almost always means by default." },
+          b: { label: "Average Case", body: "The expected time over a typical/random input of size n — needs an assumption about input distribution to even define." },
+          takeaway: "Unless a question explicitly says 'average case', assume Big-O means worst case.",
+        },
+      ],
+      selfCheck: [
+        { question: "What is the time complexity of a single loop that runs i=0 to i<n, with nothing nested inside it?", answer: "O(n) — a single pass over n elements. No multiplication needed since there's no nesting." },
+        { question: "If you have two SEPARATE (not nested) loops that each run n times, one after the other, what's the combined complexity?", answer: "O(n) + O(n) = O(n). They're sequential, not nested — you add them and keep the dominant term, you don't multiply." },
+      ],
     },
 
     // ---------------------------------------------------------------
@@ -131,6 +158,35 @@ const content: SubjectContent = {
         "Doubly linked list adds a prev pointer → bidirectional traversal, more memory per node.",
         "Circular linked list: last node points back to head instead of NULL.",
       ],
+      intuition:
+        "An array is like assigned theater seats — numbered, instant to find by seat number. A linked list is a treasure hunt — each clue tells you where the next one is. That single picture explains every array-vs-linked-list tradeoff on the exam.",
+      workedExamples: [
+        {
+          title: "Convert infix to postfix",
+          problem: "Convert A + B * C to postfix using the stack-based algorithm.",
+          steps: [
+            { label: "Read A", content: "Operand → send straight to output. Output so far: A" },
+            { label: "Read +", content: "Operator, stack is empty → push it. Stack: [+]. Output: A" },
+            { label: "Read B", content: "Operand → output it. Output: A B" },
+            { label: "Read * — compare precedence", content: "* has higher precedence than the + on top of the stack, so don't pop — just push *. Stack: [+, *]. Output: A B" },
+            { label: "Read C, then end of input", content: "C is an operand → output it (A B C). Now pop everything left on the stack: pop * → A B C *, pop + → A B C * +." },
+          ],
+          answer: "A B C * +",
+        },
+      ],
+      comparisons: [
+        {
+          title: "Array vs Linked List",
+          scenario: "Both store a sequence of elements — the difference is entirely about HOW they sit in memory.",
+          a: { label: "Array", body: "Contiguous block. O(1) access by index. Insert/delete in the middle costs O(n) (shifting)." },
+          b: { label: "Linked List", body: "Scattered nodes + pointers. O(n) access (must traverse). Insert/delete at a known node costs O(1) (just repoint)." },
+          takeaway: "Lots of random access needed → array. Lots of insertion/deletion needed → linked list.",
+        },
+      ],
+      selfCheck: [
+        { question: "Why does a circular queue fix the 'wasted space' problem a plain linear queue has?", answer: "In a linear queue, slots freed near the front never get reused once front has moved past them. A circular queue wraps front/rear using modulo arithmetic, so those freed slots get reused." },
+        { question: "What's the one structural difference between a singly and a doubly linked list node?", answer: "A doubly linked node has an extra 'prev' pointer alongside 'next', enabling backward traversal — at the cost of one more pointer's worth of memory per node." },
+      ],
     },
 
     // ---------------------------------------------------------------
@@ -197,6 +253,35 @@ const content: SubjectContent = {
         "DFS → stack/recursion, goes deep first. BFS → queue, goes wide first, gives shortest path (unweighted).",
         "Max nodes at level i = 2^i. Height of complete tree with n nodes = ⌊log₂ n⌋.",
       ],
+      intuition:
+        "A BST is binary search, frozen into a shape — every 'go left or right based on a comparison' step of binary search becomes a literal left/right pointer in the tree. That's exactly why both run in O(log n).",
+      workedExamples: [
+        {
+          title: "Build a BST and read its inorder traversal",
+          problem: "Insert 50, 30, 70, 20, 40 into an empty BST, one at a time, then give the inorder traversal.",
+          steps: [
+            { label: "Insert 50", content: "Tree is empty → 50 becomes the root." },
+            { label: "Insert 30", content: "30 < 50 → goes to the left of 50." },
+            { label: "Insert 70", content: "70 > 50 → goes to the right of 50." },
+            { label: "Insert 20", content: "20 < 50 → go left to 30. 20 < 30 → goes to the left of 30." },
+            { label: "Insert 40", content: "40 < 50 → go left to 30. 40 > 30 → goes to the right of 30." },
+          ],
+          answer: "Inorder (left-root-right): 20, 30, 40, 50, 70 — always sorted ascending for a BST.",
+        },
+      ],
+      comparisons: [
+        {
+          title: "Adjacency Matrix vs Adjacency List",
+          scenario: "Both represent the same graph — the difference is space efficiency vs lookup speed.",
+          a: { label: "Adjacency Matrix", body: "V×V grid. O(1) to check if a specific edge exists. O(V²) space — wasteful for sparse graphs." },
+          b: { label: "Adjacency List", body: "Each vertex stores only its actual neighbours. O(V+E) space — efficient for sparse graphs. Checking one specific edge takes longer." },
+          takeaway: "Dense graph → matrix is fine. Sparse graph (the common case) → list wins on space.",
+        },
+      ],
+      selfCheck: [
+        { question: "Why does inorder traversal of a BST always come out sorted?", answer: "At every node, the BST property guarantees the left subtree is smaller and the right subtree is larger. Visiting left → root → right at every level naturally produces ascending order." },
+        { question: "What data structure does BFS use, and what does DFS use?", answer: "BFS uses a queue (level by level). DFS uses a stack or recursion (dives deep along one branch before backtracking)." },
+      ],
     },
 
     // ---------------------------------------------------------------
@@ -255,6 +340,34 @@ const content: SubjectContent = {
         "Counting/Radix sort: O(n+k), beats O(n log n) but only for restricted key types.",
         "External sorting = sort chunks on disk + k-way merge, used when data > RAM.",
         "Linear search O(n), no precondition. Binary search O(log n), needs sorted data.",
+      ],
+      intuition:
+        "Merge sort trusts the recursion completely and cleans up at the end (sort small, then merge). Quick sort does the hard work up front and trusts the recursion to need nothing more (partition first, then just recurse). Same divide-and-conquer skeleton, opposite philosophy about where the effort goes.",
+      workedExamples: [
+        {
+          title: "Trace merge sort on a small array",
+          problem: "Sort [8, 3, 5, 1] using merge sort.",
+          steps: [
+            { label: "Step 1: Split", content: "[8, 3, 5, 1] → [8, 3] and [5, 1]" },
+            { label: "Step 2: Split again", content: "[8, 3] → [8] and [3].  [5, 1] → [5] and [1]. Single elements are already 'sorted'." },
+            { label: "Step 3: Merge the pairs", content: "Merge [8] and [3] → [3, 8].  Merge [5] and [1] → [1, 5]." },
+            { label: "Step 4: Final merge", content: "Merge [3, 8] and [1, 5]: compare 3 vs 1 → take 1. Compare 3 vs 5 → take 3. Compare 8 vs 5 → take 5. Take remaining 8." },
+          ],
+          answer: "[1, 3, 5, 8]",
+        },
+      ],
+      comparisons: [
+        {
+          title: "Merge Sort vs Quick Sort",
+          scenario: "Both are O(n log n) divide-and-conquer sorts — but they split the work very differently.",
+          a: { label: "Merge Sort", body: "Splits blindly down the middle, does the real work while merging. Always O(n log n), stable, but needs O(n) extra space." },
+          b: { label: "Quick Sort", body: "Does the real work while partitioning around a pivot, then just recurses. In-place, average O(n log n), but worst case O(n²) with a bad pivot." },
+          takeaway: "Need a guarantee (e.g. external sorting, stability)? Merge sort. Need speed in practice with low memory? Quick sort.",
+        },
+      ],
+      selfCheck: [
+        { question: "Why is merge sort always O(n log n), but quick sort can degrade to O(n²)?", answer: "Merge sort always splits exactly in half, guaranteeing log n levels. Quick sort's split depends on the pivot — a consistently bad pivot (e.g. always picking the smallest element) creates n levels instead of log n levels." },
+        { question: "Why doesn't binary search work on an unsorted array?", answer: "Binary search eliminates half the remaining range by comparing against the middle element — that elimination is only valid if everything on one side is guaranteed smaller and the other side larger, which requires sorted order." },
       ],
     },
 
@@ -319,6 +432,36 @@ const content: SubjectContent = {
         "Double hashing step size comes from a 2nd hash function — best distribution.",
         "Trie: each path = a string; great for prefix search / autocomplete.",
         "Hashing turns 'find duplicate' / 'set intersection' from O(n²) into ~O(n).",
+      ],
+      intuition:
+        "A hash table is a library with no catalogue — you compute exactly which shelf a book belongs on from its title, so you never have to search. A collision is just two books landing on the same shelf; chaining keeps a small stack on that shelf, open addressing tells the second book to take the next shelf over.",
+      workedExamples: [
+        {
+          title: "Insert with linear probing",
+          problem: "Insert keys 23, 13, 33 into a hash table of size m=10 using h(k) = k mod 10, resolving collisions with linear probing.",
+          steps: [
+            { label: "Insert 23", content: "h(23) = 23 mod 10 = 3 → slot 3 is empty → place 23 at slot 3." },
+            { label: "Insert 13", content: "h(13) = 13 mod 10 = 3 → slot 3 is taken (by 23) → probe slot 4 → empty → place 13 at slot 4." },
+            { label: "Insert 33", content: "h(33) = 33 mod 10 = 3 → slot 3 taken, probe slot 4 → taken, probe slot 5 → empty → place 33 at slot 5." },
+          ],
+          answer: "Slot 3: 23,  Slot 4: 13,  Slot 5: 33 — three different keys all hashing to 3, resolved by walking forward one slot at a time.",
+        },
+      ],
+      comparisons: [
+        {
+          title: "Chaining vs Linear Probing",
+          scenario: "Two different answers to the same problem: what do you do when two keys hash to the same slot?",
+          a: { label: "Chaining", body: "Keep a separate linked list at each slot. Table never 'fills up' awkwardly, but performance degrades if one slot's chain gets long." },
+          b: { label: "Linear Probing", body: "Walk forward to the next empty slot, no extra structure needed. Simpler memory-wise, but prone to clustering — colliding keys pile up in runs." },
+          takeaway: "Chaining handles a high load factor more gracefully; open addressing is more cache-friendly but needs a low load factor to stay fast.",
+        },
+      ],
+      selfCheck: [
+        { question: "What's the difference between the hash function's job and the collision-resolution scheme's job?", answer: "The hash function's job is to map a key to a slot index (e.g. k mod m). The collision-resolution scheme's job is to decide what happens when two different keys land on the same slot — they're independent design choices." },
+        { question: "Why does double hashing spread keys out better than linear probing?", answer: "Linear probing always steps by 1, so once two keys collide they follow the exact same probe sequence from then on (clustering). Double hashing's step size comes from a second hash function, so different colliding keys typically get different step sizes and spread apart instead of clumping." },
+      ],
+      crossLinks: [
+        { label: "Hashing & hash tables also show up in Computer Networks (S6) — e.g. routing tables", href: "/s6/computer-networks" },
       ],
     },
   ],
